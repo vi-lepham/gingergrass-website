@@ -1,12 +1,8 @@
 
-const targets1 = document.querySelectorAll('.animation');
-const menuImages = document.querySelectorAll('.toggle-menu img');
-const menuLists = document.querySelectorAll('.menu-list li');
-const 
-
 //Scroll Animation
+const targets = document.querySelectorAll('.animation');
+
 observer = new IntersectionObserver((entries) => {
-    console.log(entries);
     entries.forEach(entry => {
         if (entry.intersectionRatio > 0) {
             entry.target.style.animation = `anim1 1s forwards ease-out ${entry.target.dataset.delay}`;
@@ -15,18 +11,16 @@ observer = new IntersectionObserver((entries) => {
         }
     })
 });
-
-targets1.forEach(target => {
+targets.forEach(target => {
     observer.observe(target);
 });
 
-//Slideshow Starts Here
 
+
+//Slideshow Starts Here
 let i = 0;
 let images = [];
 let time = 4000;
-const slider = document.querySelector('.slider img');
-
 //Image List
 images[0] = "gingergrass_0.jpg";
 images[1] = "GG_entrance.jpg";
@@ -35,6 +29,7 @@ images[3] = "GG_inhour.jpg";
 images[4] = "GG_outsidein.jpg";
 
 const slideShow = () => {
+    const slider = document.querySelector('.slider img');
     slider.src = images[i];
 
     if (i < images.length - 1 ) {
@@ -42,20 +37,21 @@ const slideShow = () => {
     } else {
         i = 0;
     }
-
-
     setTimeout("slideShow()", time);
 }
-
 window.onload = slideShow;
-
 //Slideshow Ends here
 
-//Enlarge Menus
+
+
+
+// Enlarge Menus on Click
+const menuImages = document.querySelectorAll('.toggle-menu img');
+
 menuImages.forEach(image => {
     const enlarge = document.querySelector('.enlarge');
     const closeBtn = document.querySelector('.enlarge button');
-    let enlargedImg = document.querySelector('.enlarge img')
+    const enlargedImg = document.querySelector('.enlarge img');
     let imageSrc = image.src;
 
     image.addEventListener('click', () => {
@@ -68,38 +64,26 @@ menuImages.forEach(image => {
     })
 })
 
-// Select menu types 
-menuLists.forEach(list => {
-    list.addEventListener('click', () => {
-        let current = document.querySelectorAll('.active');
-        // If select another list
-        if (current.length > 0) {
-            current[0].classList.remove('active');
-        }
-        
-        list.className += 'active';
 
+//Toggle Menu on each List Button Click
+const menuLists = document.querySelectorAll('.menu-list li');
 
-    })
-})
-
-// Toggle menu 
 menuLists.forEach((list, index) => {
     list.addEventListener('click', () => {
-        
-        const menu = document.querySelectorAll('.toggle-menu li');
-        let current = document.querySelectorAll('.active');
-        let displayed = document.querySelectorAll('.displayed')
+        const toggledMenu = document.querySelectorAll('.toggle-menu li');
+        const active = document.querySelectorAll('.active');
+        const displayed = document.querySelectorAll('.displayed');
 
+        if (active.length > 0) {
+            active[0].classList.remove('active');
+        }
+        list.className += 'active';
+        
         if (displayed.length > 0) {
             displayed[0].classList.remove('displayed');
         }
-        
-        menu[index].className += 'displayed';
-
-    })
+        toggledMenu[index].className += 'displayed';
+    });
 })
-
-
 
 

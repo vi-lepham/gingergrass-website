@@ -218,7 +218,8 @@ header .line {
 
 .menu .menu-list li:hover {
   cursor: pointer;
-  margin-right: 7%;
+  -webkit-transform: translateX(-7%);
+          transform: translateX(-7%);
   opacity: 1;
 }
 
