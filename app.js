@@ -1,47 +1,48 @@
+//Info Box Appear on Scroll Animation
+const scrolledIntoView = () => {
+    const infoBox = document.querySelector('.info');
+    const position = infoBox.getBoundingClientRect();
+    const elmTop = position.top;
+    const appearHeight = window.innerHeight / 2;
 
-//Scroll Animation
-const targets = document.querySelectorAll('.animation');
-
-observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-            entry.target.style.animation = `anim1 1s forwards ease-out ${entry.target.dataset.delay}`;
-        } else {
-            entry.target.style.animation = 'none';
-        }
-    })
-});
-targets.forEach(target => {
-    observer.observe(target);
-});
-
-
-
-//Slideshow Starts Here
-let i = 0;
-let images = [];
-let time = 4000;
-//Image List
-images[0] = "gingergrass_0.jpg";
-images[1] = "GG_entrance.jpg";
-images[2] = "GG_inside.jpg";
-images[3] = "GG_inhour.jpg";
-images[4] = "GG_outsidein.jpg";
-
-const slideShow = () => {
-    const slider = document.querySelector('.slider img');
-    slider.src = images[i];
-
-    if (i < images.length - 1 ) {
-        i++;
-    } else {
-        i = 0;
+    if (elmTop < appearHeight) {
+        infoBox.style.display = 'flex';
+        infoBox.style.animation = 'fadeIn 1s ease';
     }
-    setTimeout("slideShow()", time);
-}
-window.onload = slideShow;
-//Slideshow Ends here
 
+}
+/*const fadeFromView = () => {
+    const infoBox = document.querySelector('.info');
+    const position = infoBox.getBoundingClientRect();
+    const elmBottom = position.bottom;
+    const fadeHeight = window.innerHeight / 3;
+
+    if (elmBottom < fadeHeight) {
+        infoBox.style.animation = 'fadeOut 1s ease';
+    }
+}
+*/
+
+
+window.addEventListener('scroll', scrolledIntoView);
+window.addEventListener('scroll', fadeFromView);
+
+//Scroll Image Parallax
+window.addEventListener('scroll', function(e) {
+    const target = document.querySelectorAll('.parallax');
+    for (i = 0; i < target.length; i++) {
+        let position = window.pageYOffset * target[i].dataset.rate;
+        target[i].style.transform = 'translate3d(0px, '+position+'px, 0px)';
+    }
+});
+
+/*
+//Slideshow Ends here
+ this.parallax = (t,e)=>{
+                this.offset = (this.wrap[e].getBoundingClientRect().top - window.innerHeight) / 5,
+                t.querySelector("img").style.transform = "translateY(" + Math.abs(this.offset) + "px)"
+            }
+*/
 
 
 
