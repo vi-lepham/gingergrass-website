@@ -53,7 +53,7 @@ main {
                 width: 60%;
                 margin-top: 15vh;
                 background-color: rgba($color:rgb(253, 251, 251), $alpha: 0.7);
-                color: rgb(58, 126, 158);
+                color: rgb(43, 43, 43);
                 padding: 3% 5%;
                 h2 {
                     font-size: 30px;
@@ -67,9 +67,9 @@ main {
             .concept-2 {
                 @include parallaxImage();
                 z-index: -1;
-                grid-column: 3 / 8;
+                grid-column: 1 / 8;
                 margin-top: 25vh;
-                height: 400px;
+                height: 500px;
                 background-image: url('../images/tomyumpho.jpg');
                 background-position: center;
             }
@@ -82,9 +82,9 @@ main {
             .concept-3 {
                 @include parallaxImage();
                 margin-top: 40vh;
-                grid-column: 1 / 5;
+                grid-column: 1 / 8;
                 width: 100%;
-                height: 400px;
+                height: 500px;
                 background-image: url('../images/gaiyang.jpg');
                 background-position: center;
                 background-size: cover;
@@ -96,7 +96,7 @@ main {
                 grid-column: 4 / 7;
                 margin-top: 30vh;
                 background-color: rgba($color:rgb(253, 253, 253), $alpha: 0.7);
-                color: $rgb(43, 43, 43);
+                color: rgb(43, 43, 43);
                 padding: 5% 8%;
 
                 h2 {
@@ -129,7 +129,7 @@ main {
             grid-column-start: 5;
             position: absolute;
             z-index: 1;
-            top: 62vh;
+            top: 30vh;
             right: 0;
             font-size: 5em;
             font-weight: 700;

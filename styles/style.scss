@@ -35,7 +35,7 @@ $primaryColor:rgb(193, 255, 216);
 
 body {
     max-height: fit-content;
-    background-color: rgba($color: #817e6f, $alpha: 0.95);
+    background-color: rgba($color: #0a0333, $alpha: 1);
     font-family: 'Oswald', sans-serif;
     color: $primaryColor;
 }
@@ -52,16 +52,8 @@ a {
     color: inherit;
 }
 
-.line {
-    position: absolute;
-    left: 50%;
-    width: 1.5px;
-    z-index: -3;
-    background-color: $primaryColor;
-}
-
 .headline {
-    font-size: 10em;
+    font-size: 5rem;
 }
 
 footer {
@@ -74,9 +66,6 @@ footer {
     }
 }
 
-.animation {
-    opacity: 0;
-}
 
 .active {
     color: $primaryColor;
@@ -86,10 +75,10 @@ footer {
     opacity: 1;
 }
 .active::after {
-    content: '';
-    width: 10%;
-    height: 3px;
-    background-color: $primaryColor;
+    content: '-';
+    width: 10px;
+    height: 2px;
+    color: $primaryColor;
 }
 
 @include largeTablet(){

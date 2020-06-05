@@ -1,50 +1,67 @@
+//Autoplay Carousel
+const carousel = document.querySelector('.carousel-track');
+const carouselImg = document.querySelectorAll('.carousel-track li');
+const nextBtn = document.querySelector('.right-button');
+const prevBtn = document.querySelector('.left-button');
+let index = 1;
+const size = carouselImg[0].clientWidth;
+
+const autoPlay = () => {
+    const startSlide = setInterval(() => {
+        index++;
+        carousel.style.transform = 'translateX(' + (-size *index) + 'px)';
+        carousel.style.transition = 'transform 1s ease-in-out';
+    }, 5000)
+}
+
+carousel.addEventListener('transitionend', () => {
+    if (carouselImg[index].id === 'lastClone') {
+        carousel.style.transition = 'none';
+        index = carouselImg.length - 2;
+        carousel.style.transform = 'translateX(' + (-size *index) + 'px)';
+    }
+    if (carouselImg[index].id === 'firstClone') {
+        carousel.style.transition = 'none';
+        index = carouselImg.length - index;
+        carousel.style.transform = 'translateX(' + (-size *index) + 'px)';
+    }
+})
+
+const nextSlide = () => {
+    index++;
+    carousel.style.transform = 'translateX(' + (-size *index) + 'px)';
+    carousel.style.transition = 'transform 1s ease-in-out';
+}
+const prevSlide = () => {
+    index--;
+    carousel.style.transform = 'translateX(' + (-size *index) + 'px)';
+    carousel.style.transition = 'transform 1s ease-in-out';
+}
+
+autoPlay();
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
 //Info Box Appear on Scroll Animation
-const scrolledIntoView = () => {
-    const infoBox = document.querySelector('.info');
-    const position = infoBox.getBoundingClientRect();
-    const elmTop = position.top;
-    const appearHeight = window.innerHeight / 2;
+const infoBox = document.querySelector ('.info');
 
-    if (elmTop < appearHeight) {
-        infoBox.style.display = 'flex';
-        infoBox.style.animation = 'fadeIn 1s ease';
-    }
+const fadeOptions = {
+    threshold: 1,
+};
 
-}
-/*const fadeFromView = () => {
-    const infoBox = document.querySelector('.info');
-    const position = infoBox.getBoundingClientRect();
-    const elmBottom = position.bottom;
-    const fadeHeight = window.innerHeight / 3;
+const fadeInOnScroll = new IntersectionObserver(function(entries, fadeInOnScroll) {
+    entries.forEach(entry => {
+        console.log(entry);
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('appear');
+            fadeInOnScroll.unobserve(entry.target);
+        }
+    });
+}, fadeOptions);
 
-    if (elmBottom < fadeHeight) {
-        infoBox.style.animation = 'fadeOut 1s ease';
-    }
-}
-*/
-
-
-window.addEventListener('scroll', scrolledIntoView);
-window.addEventListener('scroll', fadeFromView);
-
-//Scroll Image Parallax
-window.addEventListener('scroll', function(e) {
-    const target = document.querySelectorAll('.parallax');
-    for (i = 0; i < target.length; i++) {
-        let position = window.pageYOffset * target[i].dataset.rate;
-        target[i].style.transform = 'translate3d(0px, '+position+'px, 0px)';
-    }
-});
-
-/*
-//Slideshow Ends here
- this.parallax = (t,e)=>{
-                this.offset = (this.wrap[e].getBoundingClientRect().top - window.innerHeight) / 5,
-                t.querySelector("img").style.transform = "translateY(" + Math.abs(this.offset) + "px)"
-            }
-*/
-
-
+fadeInOnScroll.observe(infoBox);
 
 // Enlarge Menus on Click
 const menuImages = document.querySelectorAll('.toggle-menu img');
