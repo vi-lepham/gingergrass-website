@@ -5,78 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="新宿のタイ料理・ベトナム料理のお店GINGER GRASS(ジンジャーグラス) 2018年7月14日(土) NEW OPEN!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
     <title>新宿のタイ・ベトナム料理|GINGER GRASS(ジンジャーグラス) | 株式会社HUGE（ヒュージ）</title>
 </head>
 
 <body>
-    <header>
-        <div class="hero">
-            <nav>
-                <div><a href="#">Reservation</a></div>
-                <div>
-                    <ul>
-                        <li class="line"></li>
-                        <li class="line"></li>
-                        <li class="line"></li>
-                    </ul>
-                </div>
-            </nav>
-                    
-            <img class="logo" src="./images/gg_logo1.png" alt="">
-            <div class="carousel">
-                <button class="left-button">
-                    <i class="fa fa-angle-left"></i>
-                </button>
-                <div class="carousel-container">
-                    <ul class="carousel-track">
-                        <li id="lastClone">
-                            <img src="./images/GG_outsidein.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/GG_entrance.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/GG_inhour.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/GG_inside.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="./images/GG_outsidein.jpg" alt="">
-                        </li>
-                        <li id="firstClone">
-                            <img src="./images/GG_entrance.jpg" alt="">
-                        </li>
-                    </ul>
-                </div>
-                <button class="right-button">
-                    <i class="fa fa-angle-right"></i>
-                </button>
-                <div class="carousel-nav">
-                    <button class="carousel-dot"></button>
-                    <button class="carousel-dot"></button>
-                    <button class="carousel-dot"></button>
-                    <button class="carousel-dot"></button>
-                </div>
+    <!-- <section class="s-opening">
+        <div class="o-logo">
+            <div>
+                <h1>GINGER GRASS</h1>
             </div>
-            <div class="info">
-                <div class="i-onlineshop">
-                    <img src="./images/illustration.png" alt="Online Shop Button">
-                    <div class="onlineshop-btn">Online Shop</div>
-                </div>
-                <div class="i-news">
-                    <div class="i-date">2020/06/01</div>
-                    <div class="i-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, debitis?</div>
-                </div>
+            <div>
+                <p>Modern Thai Vietnamese</p>
             </div>
         </div>
-        
-    </header>
+        <div class="o-image">
+            <div class="img"></div>
+        </div>
+    </section> -->
     <main>
-        <div class="concept">
+        <section class="s-hero">
+            <div class="nav">
+                <div><a href="#">Reservation</a></div>
+                <ul>
+                    <li class="line"></li>
+                    <li class="line"></li>
+                </ul>
+            </div> 
+        </section>
+        <section class="s-info">
+            <div class="i-onlineshop">
+                <img src="./images/illustration.png" alt="Online Shop Button">
+                <div class="onlineshop-btn">Online Shop</div>
+            </div>
+            <div class="i-news">
+                <div class="i-date">2020/06/01</div>
+                <div class="i-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, debitis?</div>
+            </div>
+        </section>
+        <section class="s-concept">
             <div class="headline">CONCEPT</div>
 
             <div class="row-1">
@@ -93,9 +62,27 @@
                     <p>"Hot and spicy Thai food" and "fresh and herby Vietnamese food". We serve you a Modern Asian cuisines which is a perfect mix of these food. Herbs are transported by air from Thailand and Vietnam. All Sauces and seasonings are made fresh in the kithcen using the best ingredients. Please enjoy the bite-size appetizers followed by entrees to share and of course the pho made with homemade pho noodles to finish up the meal.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="menu">
+        <section class="s-carousel">
+            <button class="left-button">
+                <i class="fa fa-angle-left"></i>
+            </button>
+            <div class="carousel-container">
+                <ul class="carousel-track">
+                </ul>
+            </div>
+            <button class="right-button">
+                <i class="fa fa-angle-right"></i>
+            </button>
+            <div class="carousel-nav">
+                <button class="carousel-dot"></button>
+                <button class="carousel-dot"></button>
+                <button class="carousel-dot"></button>
+                <button class="carousel-dot"></button>
+            </div>
+        </section>
+        <section class="s-menu">
             <div class="headline">MENU</div>
             <ul class="menu-list">
                 <li class="active">LUNCH</li>
@@ -132,10 +119,9 @@
                 <img src="./images/GG_BL.jpg" alt="">
                 <button>&times;</button>
             </div>
-        </div>
+        </section>
 
-
-        <div class="access">
+        <section class="s-access">
             <div class="headline">ACCESS & INFO</div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12962.481781331446!2d139.7004773!3d35.6863467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f6efc05f5246fca!2sGINGER%20GRASS%20modern%20thai%20vietnamese!5e0!3m2!1sen!2sjp!4v1590309475237!5m2!1sen!2sjp" width="600" height="450" frameborder="-0" style="border:-0;" allowfullscreen="" aria-hidden="false" tabindex="-0"></iframe>
             <div class="info-1">
@@ -152,34 +138,12 @@
                 </div>
             </div>
             <div class="info-2">
-                
             </div>
-        </div>
-        
-        <div class="line"></div>
-
-        <div class="restaurants">
-            <div class="modern-asian">
-                <h2>Modern Asian</h2>
-                <a href="https://www.huge.co.jp/restaurant/modern-asian/gingergrass">
-                    <img src="./images/shop_logo01.png"></a>
-                <a href="https://www.huge.co.jp/restaurant/modern-asian/madammy" target="_blank">
-                    <img src="./images/shop_logo02.png"></a>
-                <a href="https://www.huge.co.jp/restaurant/modern-asian/betelnut" target="_blank">
-                    <img src="./images/shop_logo03.png"></a>
-            </div>
-        </div>
+        </section>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+    integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
-<footer>
-    <div class="f-left">
-        <p>RECRUIT</p>
-    	<p>PRIVACY</p>
-    	<p>HUGE CO.,Ltd.</p>
-    </div>
-	<div class="f-right">
-        <p>Copyright © Enterprise HUGE Co.,Ltd. All Rights Reserved.</p>
-    </div>
-</footer>
 </html>

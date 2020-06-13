@@ -25,7 +25,8 @@
     }
 }
 
-$primaryColor:rgb(193, 255, 216);
+$primaryColor:rgb(83, 182, 119);
+$secondaryColor: rgb(0, 0, 0);
 
 * {
     margin: 0;
@@ -35,9 +36,17 @@ $primaryColor:rgb(193, 255, 216);
 
 body {
     max-height: fit-content;
-    background-color: rgba($color: #0a0333, $alpha: 1);
+    background-color: $secondaryColor;
     font-family: 'Oswald', sans-serif;
     color: $primaryColor;
+}
+
+main {
+    // overflow: hidden;
+    // height: 0;
+    height: 100%;
+    position: relative;
+    top: 0;
 }
 
 button {
@@ -52,6 +61,9 @@ a {
     color: inherit;
 }
 
+ul {
+    list-style: none;
+}
 .headline {
     font-size: 5rem;
 }

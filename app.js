@@ -1,3 +1,31 @@
+// Opening
+// TweenMax.staggerFrom(".o-logo div", 1.5, {
+//     opacity: 0,
+//     y: 50,
+//     ease: Expo.easeInOut
+// }, 0.2)
+// TweenMax.to(".o-image", 1.5, {
+//     height: '60vh',
+//     delay: 1.6,
+//     ease: Expo.easeInOut
+// })
+// TweenMax.to(".o-image img", 1.5, {
+//     height: '100%',
+//     delay: 2.3,
+//     ease: Expo.easeInOut
+// })
+// TweenMax.to(".s-opening", 2, {
+//     y: '-100vh',
+//     height: 0,
+//     delay: 2.7,
+//     ease: Expo.easeInOut
+// })
+// TweenMax.to("main", 2, {
+//     overflow: 'visible',
+//     height: '100%',
+//     delay: 3,
+//     ease: Expo.easeInOut
+// })
 //Autoplay Carousel
 const carousel = document.querySelector('.carousel-track');
 const carouselImg = document.querySelectorAll('.carousel-track li');
@@ -41,27 +69,6 @@ const prevSlide = () => {
 autoPlay();
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
-
-//Info Box Appear on Scroll Animation
-const infoBox = document.querySelector ('.info');
-
-const fadeOptions = {
-    threshold: 1,
-};
-
-const fadeInOnScroll = new IntersectionObserver(function(entries, fadeInOnScroll) {
-    entries.forEach(entry => {
-        console.log(entry);
-        if (!entry.isIntersecting) {
-            return;
-        } else {
-            entry.target.classList.add('appear');
-            fadeInOnScroll.unobserve(entry.target);
-        }
-    });
-}, fadeOptions);
-
-fadeInOnScroll.observe(infoBox);
 
 // Enlarge Menus on Click
 const menuImages = document.querySelectorAll('.toggle-menu img');
