@@ -85,12 +85,63 @@ footer {
     -webkit-text-stroke-width: 2px;
     margin-right: 15%;
     opacity: 1;
+    position: relative;
 }
-.active::after {
-    content: '-';
-    width: 10px;
-    height: 2px;
+
+input {
+    background: rgba(0,0,0,.2);
+    border-style: none;
+    font: inherit;
+    outline: none;
+    box-shadow: none;
+    &::placeholder {
+        color: white;
+        opacity: .7;
+        padding-left: 2%;
+    }
+}
+
+input[type="date"] {
+    color: white;
+    opacity: .7;
+    padding: 2%;
+}
+input[type="time"] {
+    color: white;
+    opacity: .7;
+    padding: 2%;
+}
+
+input[type="submit"] {
+    background-color: white;
     color: $primaryColor;
+    font-size: 20px;
+    padding: 1% 4%;
+    border-radius: 5px;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.reserve-btn {
+    border: 1px solid $primaryColor;
+    padding: 0.7% 2%;
+    width: fit-content;
+}
+
+.active {
+    transform: translateX(0) !important;
+    background-color: rgba(0,0,0,.7) !important;
+}
+
+.line1.open {
+    transform: rotate(45deg) translateX(5px) translateY(3px) !important;
+}
+.line2.open {
+    transform: rotate(-45deg) translateX(1px) !important;
+}
+.reserve-btn.hide {
+    opacity: 0;
+    
 }
 
 @include largeTablet(){

@@ -68,8 +68,9 @@ $secondaryColor: rgb(182, 164, 83);
 
 .s-hero {
     position: relative;
-    width: 100%;
+    max-width: 100%;
     height: 100vh;
+    overflow: hidden;
     .nav {
         display: flex;
         justify-content: space-between;
@@ -78,6 +79,9 @@ $secondaryColor: rgb(182, 164, 83);
         width: 100%;
         height: 15vh;
         font-size: 20px;
+        z-index: 5;
+        position: fixed;
+        
         ul {
             display: flex;
             flex-direction: column;
@@ -89,6 +93,133 @@ $secondaryColor: rgb(182, 164, 83);
                 height: 2px;
                 background-color: $primaryColor;
                 margin-bottom: 5px;
+                transition: all 0.5s ease;
+            }
+            .reserve-btn {
+                transition: all 0.5s ease;
+            }
+        }
+    }
+    .hero {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        .h-image {
+            height: 100vh;
+            overflow: hidden;
+            object-fit: cover;
+            object-position: bottom;
+            margin-left: 50%;
+
+            img{
+                height: 110%;
+                transform: translateY(-7%);
+            }
+        }
+    }
+    .burger-menu-content {
+        position: fixed;
+        top:0;
+        bottom:0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        z-index: 1;
+        transition: all 1s ease-in-out;
+        transform: translateX(100%);
+        ul {
+            background-color: rgb(44, 44, 44);
+            -webkit-text-fill-color: $primaryColor;
+            -webkit-text-stroke: transparent;
+            width: 50%;
+            height: 100vh;
+            margin-left: 50%;
+            text-align: center;
+            padding-top: 5%;
+            font-size: 23px;
+            li {
+                margin: 5%;
+            }
+            .line {
+                width: 50%;
+                height: 1px;
+                background-color: $primaryColor;
+                margin-left: 25%;
+            }
+            .reserve-btn {
+                font-size: 20px;
+                padding: 1% 4%;
+            }
+        } 
+    }
+    .reserve-content {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        transition: all 1s ease-in-out;
+        transform: translateX(-100%);
+        z-index: 6;
+        .close-btn {
+            width: 100%;
+            margin-left: calc(100% - 30px);
+            margin-bottom: 10%;
+            z-index: 10;
+            cursor: pointer;
+            .line {
+                width: 30px;
+                height: 1.5px;
+                background-color: white;
+            }
+            .line1 {
+                transform: rotate(45deg) translateX(1px) translateY(1px);
+            }
+            .line2 {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .reserve-content-wrapper {
+        width: 60%;
+        height: 100%;
+        background-color: $primaryColor;
+        color: white;
+        padding: 5%;
+        overflow-x: hidden;
+        overflow-y: scroll; 
+        transition: all 1s ease-in-out;
+        transform: translateX(-100%);
+        h2 {
+            font-size: 40px;
+        }
+        h4 {
+            font-weight: 300;
+        }
+        #reserve-form {
+            margin-top: 5%;
+            label {
+                font-size: 23px;
+                margin-bottom: 7px;
+            }
+            .input {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 10px;
+                input {
+                    height: 7vh;
+                    min-width: 45%;
+                }
+            }
+            .inline-inputs {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
             }
         }
     }

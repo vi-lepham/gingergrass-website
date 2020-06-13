@@ -28,12 +28,81 @@
     <main>
         <section class="s-hero">
             <div class="nav">
-                <div><a href="#">Reservation</a></div>
-                <ul>
-                    <li class="line"></li>
-                    <li class="line"></li>
+                <div class="reserve-btn"><a href="#">Reservation</a></div>
+                <ul class="burger-btn">
+                    <li class="line line1"></li>
+                    <li class="line line2"></li>
                 </ul>
+            </div>
+            <div class="hero">
+                <div class="h-image">
+                    <img src="./images/cooked-food-in-stainless-steel-plate-2641886.jpg" alt="Cooked food in stainless steel plate">
+                </div>
+                <div class="watermark-text">
+                    <h1>MODERN ASIAN</h1>
+                </div>
             </div> 
+            <div class="reserve-content">
+                <div class="reserve-content-wrapper">
+                    <div class="close-btn">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                    </div>
+                    <div class="reserve-text">
+                        <h2>Request a table reservation</h2>
+                        <h4>We look forward to your request to reserve a table and will contact you as soon as possible. For children we recommend a restaurant visit from the age of 7.
+                            <br>
+                            Please note that fields marked with an asterisk * are required.
+                        </h4>
+                        <form id="reserve-form">
+                            <div class="input name-input">
+                                <label for="name">What's your name?</label>
+                                <input id="name" type="text" placeholder="Your fullname *">
+                            </div>
+                            <div class="input time-input">
+                                <label for="time">When would you like to visit?</label>
+                                <div class="inline-inputs">
+                                    <input type="date" id="date" placeholder="Choose date *">
+                                    <input type="time" id="time" placeholder="Choose time*">
+                                </div>
+                            </div>
+                            <div class="input people-input">
+                                <label for="people">How many people would you like to reserve for?</label>
+                                <input type="number" id="people" placeholder="Enter a number">
+                            </div>
+                            <div class="input contact-input">
+                                <label for="contact">How can we contact you?</label>
+                                <div class="inline-inputs">
+                                    <input type="email" id="email" placeholder="Your email *">
+                                    <input type="tel" id="phone" placeholder="Your phone number *">
+                                </div>
+                            </div>
+                            <div class="input request-input">
+                                <label for="request">Special information</label>
+                                <input type="text" id="request" placeholder="Such as allergies or special occasions (birthday party, wedding)">
+                            </div>
+                            <div class="policy-check">
+                                <input type="checkbox" id="policy">
+                                <label for="policy">I agree to Privacy Policy</label>
+                            </div>
+                            <div class="submit-btn">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="burger-menu-content">
+                <ul>
+                    <li>TOP</li>
+                    <li>NEWS</li>
+                    <li>CONCEPT</li>
+                    <li>MENU</li>
+                    <li>ACCESS</li>
+                    <li class="line"></li>
+                    <li><a href="#" class="reserve-btn">Reservation</a></li>
+                </ul>
+            </div>
         </section>
         <section class="s-info">
             <div class="i-onlineshop">
@@ -93,27 +162,6 @@
                 <li class="">PARTY</li>
             </ul>
             <ul class="toggle-menu">
-                <li class="displayed">
-                    <img src="./images/GG_BL.jpg" alt="Ginger Grass Business Lunch">
-                    <img src="./images/GG_HL.jpg" alt="Ginger Grass Holiday Lunch">
-                </li>
-                <li>
-                    <img src="./images/GG_Dinner.jpg" alt="">
-                </li>
-                <li>
-                    <img src="./images/2750_Wine.jpg" alt="">
-                    <img src="./images/GG_Wine.jpg" alt="">
-                </li>
-                <li>
-                    <img src="./images/GG_drink.jpg" alt="">
-                </li>
-                <li>
-                    <img src="./images/GG_Party.jpg" alt="">
-                </li>
-                <li>
-                    <img src="./images/GG_pp.jpg" alt="">
-                    <img src="./images/GG_layout.jpg" alt="">
-                </li>
             </ul>
             <div class="enlarge">
                 <img src="./images/GG_BL.jpg" alt="">
