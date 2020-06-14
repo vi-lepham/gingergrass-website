@@ -35,8 +35,7 @@ $secondaryColor: rgb(182, 164, 83);
     top: 0;
     z-index: -1;
     .o-logo {
-        font-family: 'Julius Sans One', sans-serif;
-        text-align: center;
+        color: $primaryColor;
         @include center();
         h1 {
             font-size: 5rem;
@@ -70,7 +69,6 @@ $secondaryColor: rgb(182, 164, 83);
     position: relative;
     max-width: 100%;
     height: 100vh;
-    overflow: hidden;
     .nav {
         display: flex;
         justify-content: space-between;
@@ -79,9 +77,28 @@ $secondaryColor: rgb(182, 164, 83);
         width: 100%;
         height: 15vh;
         font-size: 20px;
-        z-index: 5;
+        z-index: 10;
         position: fixed;
         
+        .h-logo {
+            font-size: 2rem;
+            background-color: rgba($color:rgb(255, 255, 255), $alpha: 0.9);
+            color: rgb(44, 107, 69);
+            padding: 2% 3%;
+            transition: all 0.3s ease-in-out;
+            transform: translateX(-15%);
+            z-index: 6;
+            h2 {
+                font-size: 25px;
+            }
+            p {
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+        .reserve-btn {
+            transition: all 0.5s ease;
+        }
         ul {
             display: flex;
             flex-direction: column;
@@ -95,29 +112,35 @@ $secondaryColor: rgb(182, 164, 83);
                 margin-bottom: 5px;
                 transition: all 0.5s ease;
             }
-            .reserve-btn {
-                transition: all 0.5s ease;
-            }
         }
     }
     .hero {
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
         width: 100%;
         height: 100vh;
-        z-index: -1;
+        display: flex;
+        justify-content: space-between;
         .h-image {
-            height: 100vh;
+            height: 120vh;
             overflow: hidden;
             object-fit: cover;
-            object-position: bottom;
-            margin-left: 50%;
-
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
             img{
                 height: 110%;
-                transform: translateY(-7%);
+                transform: translateY(-7%) translateX(-5%);
             }
+        }
+        .h-title {
+            width: 100%;
+            font-size: 6rem;
+            color: $secondaryColor;
+            z-index: 5;
+            text-align: center;
+            margin-top: 7%;
+            padding: 5%;
         }
     }
     .burger-menu-content {
@@ -127,7 +150,7 @@ $secondaryColor: rgb(182, 164, 83);
         left: 0;
         right: 0;
         width: 100vw;
-        z-index: 1;
+        z-index: 6;
         transition: all 1s ease-in-out;
         transform: translateX(100%);
         ul {
@@ -163,9 +186,49 @@ $secondaryColor: rgb(182, 164, 83);
         right: 0;
         width: 100%;
         height: 100vh;
+        background-color: rgba(0,0,0,.7);
         transition: all 1s ease-in-out;
         transform: translateX(-100%);
         z-index: 6;
+        -webkit-text-fill-color: inherit;
+        -webkit-text-stroke: transparent;
+        .reserve-content-wrapper {
+            width: 60%;
+            height: 100%;
+            background-color: $primaryColor;
+            color: white;
+            padding: 5%;
+            overflow-x: hidden;
+            overflow-y: scroll; 
+            h2 {
+                font-size: 40px;
+            }
+            h4 {
+                font-weight: 300;
+            }
+            #reserve-form {
+                margin-top: 5%;
+                label {
+                    font-size: 23px;
+                    margin-bottom: 7px;
+                }
+                .input {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+                    input {
+                        height: 7vh;
+                        min-width: 45%;
+                    }
+                }
+                .inline-inputs {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+            }
+        }
         .close-btn {
             width: 100%;
             margin-left: calc(100% - 30px);
@@ -185,64 +248,60 @@ $secondaryColor: rgb(182, 164, 83);
             }
         }
     }
-    .reserve-content-wrapper {
-        width: 60%;
-        height: 100%;
-        background-color: $primaryColor;
-        color: white;
-        padding: 5%;
-        overflow-x: hidden;
-        overflow-y: scroll; 
-        transition: all 1s ease-in-out;
-        transform: translateX(-100%);
-        h2 {
-            font-size: 40px;
-        }
-        h4 {
-            font-weight: 300;
-        }
-        #reserve-form {
-            margin-top: 5%;
-            label {
-                font-size: 23px;
-                margin-bottom: 7px;
-            }
-            .input {
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 10px;
-                input {
-                    height: 7vh;
-                    min-width: 45%;
-                }
-            }
-            .inline-inputs {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-            }
-        }
-    }
 }
 
 .s-info {
-    position: absolute;
-    bottom: -50%;
-    left: 50%;
-    width: 50%;
-    height: 60vh;
-    padding: 0 5%;
-
-    background-color: rgba($color:rgb(255, 255, 255), $alpha: 0.7);
-    color: gray;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    transform:  translateX(-50%);
-    img {
-        width: 70%;
+    width: 100%;
+    height: 100vh;
+    background-color: $secondaryColor;
+    z-index: -10;
+    margin-top: 5%;
+    .headline {
+        color: white;
+    }
+    .i-box {
+        color: white;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 5%;
+        padding-left: 50%;
+        transform: translateX(-25%);
+        .i-news {
+            width: 50%;
+            position: relative;
+            .i-date {
+                font-size: 15px;
+                background-color: rgb(68, 68, 68);
+                text-align: center;
+                width: fit-content;
+                padding: 0px 5px 2px 5px;
+            }
+            .i-text {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+            &::after {
+                content: "";
+                background-color: white;
+                width: 1px;
+                height:20vh;
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 100%;
+            }
+        }
+        .i-takeout-btn {
+            font-size: 20px;
+            background-color: $primaryColor;
+            padding: 5px;
+            div {
+                border: 1px white solid;
+                padding: 7px 11px;
+            }
+        }
     }
 }
 

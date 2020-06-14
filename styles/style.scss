@@ -36,8 +36,8 @@ $secondaryColor: rgb(0, 0, 0);
 
 body {
     max-height: fit-content;
-    background-color: $secondaryColor;
-    font-family: 'Oswald', sans-serif;
+    background-color: white;
+    font-family: 'Playfair Display', serif;
     color: $primaryColor;
 }
 
@@ -49,11 +49,19 @@ main {
     top: 0;
 }
 
+.o-logo, .h-logo {
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+}
+
 button {
     text-decoration: none;
     border: none;
     background: none;
     cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 a {
@@ -65,7 +73,8 @@ ul {
     list-style: none;
 }
 .headline {
-    font-size: 5rem;
+    font-size: 7rem;
+    margin: 5%;
 }
 
 footer {
@@ -78,6 +87,9 @@ footer {
     }
 }
 
+.reserve-btn {
+    cursor: pointer;
+}
 
 .active {
     color: $primaryColor;
@@ -88,6 +100,9 @@ footer {
     position: relative;
 }
 
+small {
+    color: rgb(255, 119, 119);
+}
 input {
     background: rgba(0,0,0,.2);
     border-style: none;
@@ -122,15 +137,12 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-.reserve-btn {
-    border: 1px solid $primaryColor;
-    padding: 0.7% 2%;
-    width: fit-content;
-}
-
-.active {
+.burger-menu-content.active {
     transform: translateX(0) !important;
     background-color: rgba(0,0,0,.7) !important;
+}
+.reserve-content.active {
+    transform: translateX(0);
 }
 
 .line1.open {
@@ -139,9 +151,8 @@ input[type="submit"] {
 .line2.open {
     transform: rotate(-45deg) translateX(1px) !important;
 }
-.reserve-btn.hide {
+.reserve-btn.hide, .h-logo.hide {
     opacity: 0;
-    
 }
 
 @include largeTablet(){

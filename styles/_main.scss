@@ -35,98 +35,57 @@ $primaryColor:rgb(83, 182, 119);
 
 
 .s-concept {
-    @include gridTemplate();
     position: relative;
-    
-    .headline {
-        grid-column-start: 2;
-    }
-    .row-1 {
-        @include gridTemplate();
-        grid-column: 1 / 8;
-        position: relative;
-        .concept-1 {
+    height: 220vh;
+    .c-images {
+        .spice-img {
+            width: 40%;
+            overflow: hidden;
             position: absolute;
-            grid-column-start: 2;
-            width: 60%;
-            margin-top: 15vh;
-            background-color: rgba($color:rgb(253, 251, 251), $alpha: 0.7);
-            color: rgb(43, 43, 43);
-            padding: 3% 5%;
-            h2 {
-                font-size: 30px;
-                margin-bottom: 4vh;
-            }
-            p {
-                font-size: 14px;
+            top: -10%;
+            right: 5%;
+            img{
+                max-width: 100%;
             }
         }
-        
-        .concept-2 {
-            @include parallaxImage();
-            z-index: -1;
-            grid-column: 1 / 8;
-            margin-top: 25vh;
-            height: 500px;
-            background-image: url('../images/tomyumpho.jpg');
-            background-position: center;
+        .ginger-img {
+            width: 40%;
+            position: absolute;
+            margin-left: 5%;
+            img{
+                max-width: 100%;
+            }
         }
     }
-
-    .row-2 {
-        @include gridTemplate();
-        grid-column: 1 / 8;
-        position: relative;
-        .concept-3 {
-            @include parallaxImage();
-            margin-top: 40vh;
-            grid-column: 1 / 8;
-            width: 100%;
-            height: 500px;
-            background-image: url('../images/gaiyang.jpg');
-            background-position: center;
-            background-size: cover;
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-        }
-        .concept-4 {
-            position: absolute;
-            grid-column: 4 / 7;
-            margin-top: 30vh;
-            background-color: rgba($color:rgb(253, 253, 253), $alpha: 0.7);
-            color: rgb(43, 43, 43);
-            padding: 5% 8%;
-
-            h2 {
-                font-size: 30px;
-                margin-bottom: 4vh;
-            }
-            p {
-                font-size: 13px;
-            }
-        }
+    .c-content {
+        width: 40%;
+        margin: 5%;
+    }
+    .c-content2 {
+        width: 40%;
+        margin: 25% 55%;
+    }  
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        margin-top: 5%;
     }
 }
 
 .s-carousel{
     position: relative;
-    top: 40%;
-    transform: translateY(-50%);
     width: 100%;
     height: 75vh;
     overflow: hidden;
-    z-index: -1;
-
-    .carousel-track {
-
-        z-index: -2;
+    margin-top: 10%;
+    .c-track {
         display: flex;
-
         li{
             min-width: 100%;
             object-fit: cover;
             img {
-                margin-top: -40vh;
+                transform: translateY(-20%);
                 width: 102%;
             }
         }
@@ -144,18 +103,28 @@ $primaryColor:rgb(83, 182, 119);
     .right-button{
         right: 0;
     }
+    .c-nav {
+        position: absolute;
+        bottom: 5%;
+        width: 20%;
+        left: 53%;
+        transform: translateX(-50%);
+        .c-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: solid 1px rgba(0,0,0,.7);
+            margin: 5%;
+        }
+    }
 }
 
 .s-menu {
-    @include gridTemplate();
     position: relative;
     width: 100%;
     height: auto;
     margin-top: 20vh;
     margin-bottom: 70vh;
-    .headline {
-        grid-column-start: 2;
-    }
     .menu-list {
         list-style: none;
         height: fit-content;
@@ -229,23 +198,21 @@ $primaryColor:rgb(83, 182, 119);
 }
 
 .s-access {
-    @include gridTemplate();
-    @include section();
     padding-top: 10%;
     width: 100%;
-    .headline {
-        grid-column: 2 / 7;
+    .a-content {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 5%;
+        width: 90%;
+        iframe {
+            width: 40%;
+        }
+        .info-1 {
+            margin-top: 5%;
+            font-size: 20px;
+        }
     }
-    iframe {
-        grid-column: 2 / 7;
-        width: 100%;
-    }
-    .info-1 {
-        grid-column: 2 / 4;
-        margin-top: 5%;
-        font-size: 20px;
-    }
-    
 }
 
 

@@ -6,6 +6,7 @@
     <meta name="description" content="新宿のタイ料理・ベトナム料理のお店GINGER GRASS(ジンジャーグラス) 2018年7月14日(土) NEW OPEN!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
     <title>新宿のタイ・ベトナム料理|GINGER GRASS(ジンジャーグラス) | 株式会社HUGE（ヒュージ）</title>
@@ -29,6 +30,12 @@
         <section class="s-hero">
             <div class="nav">
                 <div class="reserve-btn"><a href="#">Reservation</a></div>
+                <div class="h-logo">
+                    <h5>
+                    GINGER GRASS
+                    </h5>
+                    <p>Modern Thai Vietnamese</p>
+                </div>
                 <ul class="burger-btn">
                     <li class="line line1"></li>
                     <li class="line line2"></li>
@@ -36,11 +43,15 @@
             </div>
             <div class="hero">
                 <div class="h-image">
-                    <img src="./images/cooked-food-in-stainless-steel-plate-2641886.jpg" alt="Cooked food in stainless steel plate">
+                    <img src="./images/steamed-food-with-leafs-on-table-1833349.jpg" alt="Cooked food in 
+                    stainless steel plate">
                 </div>
-                <div class="watermark-text">
+                <div class="h-title">
+                    Experience a new tropical Asian taste
+                </div>
+                <!-- <div class="h-watermark">
                     <h1>MODERN ASIAN</h1>
-                </div>
+                </div> -->
             </div> 
             <div class="reserve-content">
                 <div class="reserve-content-wrapper">
@@ -56,26 +67,30 @@
                         </h4>
                         <form id="reserve-form">
                             <div class="input name-input">
-                                <label for="name">What's your name?</label>
-                                <input id="name" type="text" placeholder="Your fullname *">
+                                <label for="name">What's your name? *</label>
+                                <input id="name" type="text" placeholder="Your fullname">
+                                <small></small>
                             </div>
                             <div class="input time-input">
-                                <label for="time">When would you like to visit?</label>
+                                <label for="time">When would you like to visit? *</label>
                                 <div class="inline-inputs">
-                                    <input type="date" id="date" placeholder="Choose date *">
-                                    <input type="time" id="time" placeholder="Choose time*">
+                                    <input type="date" id="date">
+                                    <input type="time" id="time">
                                 </div>
+                                <small></small>
                             </div>
                             <div class="input people-input">
-                                <label for="people">How many people would you like to reserve for?</label>
+                                <label for="people">How many people would you like to reserve for? *</label>
                                 <input type="number" id="people" placeholder="Enter a number">
+                                <small></small>
                             </div>
                             <div class="input contact-input">
-                                <label for="contact">How can we contact you?</label>
+                                <label for="contact">How can we contact you? *</label>
                                 <div class="inline-inputs">
-                                    <input type="email" id="email" placeholder="Your email *">
-                                    <input type="tel" id="phone" placeholder="Your phone number *">
+                                    <input type="email" id="email" placeholder="Your email">
+                                    <input type="number" id="phone" placeholder="Your phone number">
                                 </div>
+                                <small></small>
                             </div>
                             <div class="input request-input">
                                 <label for="request">Special information</label>
@@ -83,7 +98,8 @@
                             </div>
                             <div class="policy-check">
                                 <input type="checkbox" id="policy">
-                                <label for="policy">I agree to Privacy Policy</label>
+                                <label for="policy">I agree to Privacy Policy *</label>
+                                <small></small>
                             </div>
                             <div class="submit-btn">
                                 <input type="submit" value="Submit">
@@ -100,55 +116,78 @@
                     <li>MENU</li>
                     <li>ACCESS</li>
                     <li class="line"></li>
-                    <li><a href="#" class="reserve-btn">Reservation</a></li>
+                    <li class="reserve-btn">Reservation</li>
                 </ul>
             </div>
         </section>
         <section class="s-info">
-            <div class="i-onlineshop">
-                <img src="./images/illustration.png" alt="Online Shop Button">
-                <div class="onlineshop-btn">Online Shop</div>
+            <div class="headline">INFO</div>
+            <div class="i-box">
+                <div class="i-news">
+                    <div class="i-date">2020.06.15</div>
+                    <div class="i-text">20% for Take Out Orders</div>
+                    <div class="i-date">2020.06.15</div>
+                    <div class="i-text">20% for Take Out Orders</div>
+                </div>
+                <div class="i-takeout">
+                    <div class="i-takeout-btn"><div>
+                        Online Takeout
+                    </div></div>
+                </div>
             </div>
-            <div class="i-news">
-                <div class="i-date">2020/06/01</div>
-                <div class="i-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, debitis?</div>
-            </div>
+
         </section>
         <section class="s-concept">
             <div class="headline">CONCEPT</div>
-
-            <div class="row-1">
-                <div class="concept-1">
-                    <h2>タイ料理とベトナム料理のいいところ取り！</h2>
-                    <p>香り高いハーブはタイ・ベトナム各地から直接空輸。アジア料理に欠かせないシーズニングソースは可能な限り手作りにこだわり、オールナチュラルの物を使用します。ハーブやスパイスをふんだんに使い、一口でアジアを感じられる前菜"BITE"、楽しくシェアできる大皿料理や小皿料理、〆にはタピオカ粉を使用し、オリジナルブレンドで作り上げたモチモチ食感のフォーをお楽しみください。</p>
-                </div>
-                <div class="concept-2"></div>
+            <div class="c-content">
+                <h1>A Modern Asian cuisine with full of excitements and flavors.</h1>
+                <p>"Hot and spicy Thai food" and "fresh and herby Vietnamese food". We serve you a Modern Asian cuisines which is a perfect mix of these food. Herbs are transported by air from Thailand and Vietnam. All Sauces and seasonings are made fresh in the kithcen using the best ingredients. Please enjoy the bite-size appetizers followed by entrees to share and of course the pho made with homemade pho noodles to finish up the meal.</p>
             </div>
-            <div class="row-2">
-                <div class="concept-3"></div>
-                <div class="concept-4">
-                    <h2>A Modern Asian cuisine with full of excitements and flavors.</h2>
-                    <p>"Hot and spicy Thai food" and "fresh and herby Vietnamese food". We serve you a Modern Asian cuisines which is a perfect mix of these food. Herbs are transported by air from Thailand and Vietnam. All Sauces and seasonings are made fresh in the kithcen using the best ingredients. Please enjoy the bite-size appetizers followed by entrees to share and of course the pho made with homemade pho noodles to finish up the meal.</p>
+            <div class="c-images">
+                <div class="spice-img">
+                    <img src="./images/spices3.jpg" alt="Asian Spices">
                 </div>
+                <div class="ginger-img">
+                    <img src="./images/ginger.jpg" alt="Natural Ginger">
+                </div>
+            </div>
+            <div class="c-content2">
+                <h1>A Modern Asian cuisine with full of excitements and flavors.</h1>
+                <p>"Hot and spicy Thai food" and "fresh and herby Vietnamese food". We serve you a Modern Asian cuisines which is a perfect mix of these food. Herbs are transported by air from Thailand and Vietnam. All Sauces and seasonings are made fresh in the kithcen using the best ingredients. Please enjoy the bite-size appetizers followed by entrees to share and of course the pho made with homemade pho noodles to finish up the meal.</p>
             </div>
         </section>
-
         <section class="s-carousel">
+            <ul class="c-track">
+                <li id="lastClone">
+                    <img src="./images/red-soup.jpg" alt="">
+                </li>
+                <li>
+                    <img src="./images/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg" alt="Inside an Asian Restaurant">
+                </li>
+                <li>
+                    <img src="./images/neven-krcmarek-q0ZvNn8SXy0-unsplash.jpg" alt="Pastry with Berry Sauce and Peanuts">
+                </li>
+                <li>
+                    <img src="./images/nick-karvounis-B3Jt_d5E2Lk-unsplash.jpg" alt="Bar inside Asian Restaurant">
+                </li>
+                <li>
+                    <img src="./images/red-soup.jpg" alt="">
+                </li>
+                <li id="firstClone">
+                    <img src="./images/nick-karvounis-Ciqxn7FE4vE-unsplash.jpg" alt="Inside an Asian Restaurant">
+                </li>
+            </ul>
             <button class="left-button">
                 <i class="fa fa-angle-left"></i>
             </button>
-            <div class="carousel-container">
-                <ul class="carousel-track">
-                </ul>
-            </div>
             <button class="right-button">
                 <i class="fa fa-angle-right"></i>
             </button>
-            <div class="carousel-nav">
-                <button class="carousel-dot"></button>
-                <button class="carousel-dot"></button>
-                <button class="carousel-dot"></button>
-                <button class="carousel-dot"></button>
+            <div class="c-nav">
+                <button class="c-dot"></button>
+                <button class="c-dot"></button>
+                <button class="c-dot"></button>
+                <button class="c-dot"></button>
             </div>
         </section>
         <section class="s-menu">
@@ -158,34 +197,35 @@
                 <li class="">DINNER</li>
                 <li class="">WINE</li>
                 <li class="">DRINK</li>
-                <li class="">COURSE</li>
-                <li class="">PARTY</li>
             </ul>
             <ul class="toggle-menu">
             </ul>
             <div class="enlarge">
-                <img src="./images/GG_BL.jpg" alt="">
                 <button>&times;</button>
             </div>
         </section>
 
         <section class="s-access">
             <div class="headline">ACCESS & INFO</div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12962.481781331446!2d139.7004773!3d35.6863467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f6efc05f5246fca!2sGINGER%20GRASS%20modern%20thai%20vietnamese!5e0!3m2!1sen!2sjp!4v1590309475237!5m2!1sen!2sjp" width="600" height="450" frameborder="-0" style="border:-0;" allowfullscreen="" aria-hidden="false" tabindex="-0"></iframe>
-            <div class="info-1">
-                <div class="address">
-                    〒151-0053
-                    <br>
-                    東京都渋谷区代々木二丁目2番1号 小田急サザンタワー１階
+            <div class="a-content">
+                <div class="a-info">
+                    <div class="info-1">
+                        <div class="address">
+                            〒151-0053
+                            <br>
+                            東京都渋谷区代々木二丁目2番1号 小田急サザンタワー１階
+                        </div>
+                        <div class="phone">
+                            03-6630-0004
+                        </div>
+                        <div class="email">
+                            gingergrass@huge.co.jp
+                        </div>
+                    </div>
+                    <div class="info-2">
+                    </div>
                 </div>
-                <div class="phone">
-                    03-6630-0004
-                </div>
-                <div class="email">
-                    gingergrass@huge.co.jp
-                </div>
-            </div>
-            <div class="info-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12962.481781331446!2d139.7004773!3d35.6863467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f6efc05f5246fca!2sGINGER%20GRASS%20modern%20thai%20vietnamese!5e0!3m2!1sen!2sjp!4v1590309475237!5m2!1sen!2sjp" width="600" height="450" frameborder="-0" style="border:-0;" allowfullscreen="" aria-hidden="false" tabindex="-0"></iframe>
             </div>
         </section>
     </main>
