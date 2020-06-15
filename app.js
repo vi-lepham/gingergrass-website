@@ -14,17 +14,14 @@ class UI {
         const logo = document.querySelector('.h-logo');
         burger.classList.toggle('active');
         setTimeout(() => {
-            if (!reserveBtn.classList.contains('hide')) {
+            if(burger.classList.contains('active')) {
                 reserveBtn.classList.add('hide');
-            } else {
-                reserveBtn.classList.add('hide');
-            }
-            if (!logo.classList.contains('hide')) {
                 logo.classList.add('hide');
             } else {
-                logo.classList.add('hide');
+                reserveBtn.classList.remove('hide');
+                logo.classList.remove('hide');
             }
-        }, 500);
+        }, 500); 
     }
     static animateBurgerIcon = () => {
         const lineTop = document.querySelector('.burger-btn .line1');
@@ -99,13 +96,18 @@ document.querySelector('form').addEventListener('submit', (e) => {
 const hero = document.querySelector('.hero');
 const observerNav = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
+        const reserveBtn = document.querySelector('.reserve-btn');
+        const logo = document.querySelector('.h-logo');
         if (!entry.isIntersecting) {
-            document.querySelector('.reserve-btn').classList.add('hide');
-            document.querySelector('.h-logo').classList.add('hide');
+            
+            reserveBtn.className = 'reserve-btn hide';
+            logo.className = 'h-logo hide';
+            
         } else {
-            document.querySelector('.reserve-btn').classList.remove('hide');
-            document.querySelector('.h-logo').classList.remove('hide');
+            reserveBtn.classList.remove('hide');
+            logo.classList.remove('hide');
         }
+        console.log(reserveBtn.classList.contains('hide'));
     })
 }, {threshold: 1, rootMargin: "0px 200px 0px 0px"})
 
