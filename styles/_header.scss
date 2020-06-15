@@ -9,7 +9,7 @@
     transform: translateX(-50%) translateY(-50%);
 }
 
-@mixin mobile {
+@mixin mobileVertical {
     @media (max-width: 400px) {
         @content;
     }
@@ -141,14 +141,13 @@ $secondaryColor: rgb(182, 164, 83);
             }
         }
         .h-title {
-            width: 100%;
-            height: fit-content;
+            height: 100%;
             font-size: 6rem;
             color: $secondaryColor;
             z-index: 5;
             text-align: center;
-            margin-top: 7%;
-            padding: 5%;
+            margin-top: 15%;
+            padding: 0 5%;
         }
     }
     .burger-menu-content {
@@ -321,7 +320,7 @@ $secondaryColor: rgb(182, 164, 83);
         .hero{
             .h-title{
                 color: goldenrod;
-                margin-top: 20%;
+                margin-top: 30%;
             }
         }
     }
@@ -339,8 +338,8 @@ $secondaryColor: rgb(182, 164, 83);
             .h-title {
                 color: white;
                 text-align: left;
-                margin-top: 10%;
-                font-size: 4rem;
+                margin-top: 50%;
+                font-size: 5rem;
             }
             .h-image {
                 min-width: 100%;
@@ -373,3 +372,44 @@ $secondaryColor: rgb(182, 164, 83);
     }
 }
 
+@include mobileVertical() {
+    .s-hero {
+        .nav{
+            .reserve-btn{
+                display: none;
+            }
+        }
+        .hero {
+            height: 100vh;
+            .h-title{
+                font-size: 3.5rem;
+                margin-top: 50%;
+            }
+            .h-image{
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .s-info{
+        margin-top: -20%;
+        .i-box {
+            .i-news {
+                width: 100%;
+                .i-date {
+                    font-size: 7px;
+                }
+                .i-text {
+                    font-size: 11px;
+                }
+            }
+            .i-takeout {
+                margin-top: 5%;
+                .i-takeout-btn {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}

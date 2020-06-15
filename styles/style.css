@@ -159,16 +159,13 @@
 }
 
 .s-hero .hero .h-title {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   font-size: 6rem;
   color: #b6a453;
   z-index: 5;
   text-align: center;
-  margin-top: 7%;
-  padding: 5%;
+  margin-top: 15%;
+  padding: 0 5%;
 }
 
 .s-hero .burger-menu-content {
@@ -387,7 +384,7 @@
 @media only screen and (max-width: 1100px) {
   .s-hero .hero .h-title {
     color: goldenrod;
-    margin-top: 20%;
+    margin-top: 30%;
   }
   .s-info {
     padding-top: 5%;
@@ -408,8 +405,8 @@
   .s-hero .hero .h-title {
     color: white;
     text-align: left;
-    margin-top: 10%;
-    font-size: 4rem;
+    margin-top: 50%;
+    font-size: 5rem;
   }
   .s-hero .hero .h-image {
     min-width: 100%;
@@ -432,6 +429,40 @@
   }
   .s-info .i-box .i-takeout .i-takeout-btn {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .s-hero .nav .reserve-btn {
+    display: none;
+  }
+  .s-hero .hero {
+    height: 100vh;
+  }
+  .s-hero .hero .h-title {
+    font-size: 3.5rem;
+    margin-top: 50%;
+  }
+  .s-hero .hero .h-image img {
+    height: 100%;
+  }
+  .s-info {
+    margin-top: -20%;
+  }
+  .s-info .i-box .i-news {
+    width: 100%;
+  }
+  .s-info .i-box .i-news .i-date {
+    font-size: 7px;
+  }
+  .s-info .i-box .i-news .i-text {
+    font-size: 11px;
+  }
+  .s-info .i-box .i-takeout {
+    margin-top: 5%;
+  }
+  .s-info .i-box .i-takeout .i-takeout-btn {
+    font-size: 11px;
   }
 }
 
@@ -646,6 +677,49 @@
   }
   .s-access .a-content .a-info .info-1 {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 401px) {
+  .s-concept .c-box1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .s-concept .c-box1 .c-content {
+    width: 100%;
+  }
+  .s-concept .c-box1 .spice-img {
+    margin-top: 5%;
+    width: 100%;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .s-concept .c-box2 {
+    margin-top: 5%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .s-concept .c-box2 .c-content2 {
+    width: 100%;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .s-concept .c-box2 .ginger-img {
+    margin-top: 5%;
+    width: 100%;
+  }
+  .s-menu .menu-list {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 20px;
+    padding-left: 5%;
+    top: 10%;
   }
 }
 
