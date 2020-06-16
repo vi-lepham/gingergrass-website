@@ -1,12 +1,20 @@
 // UI Class
 class UI {
     static toggleReserve() {
+        const logo = document.querySelector('.h-logo');
         const reserve = document.querySelector('.reserve-content');
         reserve.classList.add('active');
+        setTimeout(() => {
+            logo.classList.add('hide');
+        }, 500); 
     }
     static closeReserve() {
+        const logo = document.querySelector('.h-logo');
         const reserve = document.querySelector('.reserve-content');
         reserve.classList.remove('active');
+        setTimeout(() => {
+            logo.classList.remove('hide');
+        }, 500); 
     }
     static toggleBurger() {
         const burger = document.querySelector('.burger-menu-content');
@@ -31,6 +39,18 @@ class UI {
         lineBottom.classList.toggle('open');
     }
 }
+
+// Event Listeners for reservation window 
+document.querySelectorAll('.reserve-btn').forEach(button => {
+    button.addEventListener('click', UI.toggleReserve);
+})
+document.querySelector('.close-btn').addEventListener('click', UI.closeReserve);
+
+// Event Listener for burger menu window
+document.querySelector('.burger-btn').addEventListener('click', () => {
+    UI.toggleBurger();
+    UI.animateBurgerIcon();
+})
 
 // Form Class
 class Form {
@@ -72,18 +92,6 @@ class Form {
         }
     }
 }
-
-// Event Listeners for reservation window 
-document.querySelectorAll('.reserve-btn').forEach(button => {
-    button.addEventListener('click', UI.toggleReserve);
-})
-document.querySelector('.close-btn').addEventListener('click', UI.closeReserve);
-
-// Event Listener for burger menu window
-document.querySelector('.burger-btn').addEventListener('click', () => {
-    UI.toggleBurger();
-    UI.animateBurgerIcon();
-})
 
 // Event Listener for form submit
 document.querySelector('form').addEventListener('submit', (e) => {

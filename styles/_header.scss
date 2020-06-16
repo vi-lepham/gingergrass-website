@@ -135,18 +135,18 @@ $secondaryColor: rgb(182, 164, 83);
             left: 50%;
             transform: translateX(-50%);
             img{
-                height: 110%;
-                transform: translateY(-7%);
+                height: 100%;
                 filter: blur(2px);
             }
         }
         .h-title {
-            height: 100%;
             font-size: 6rem;
             color: $secondaryColor;
             z-index: 5;
             text-align: center;
-            margin-top: 15%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             padding: 0 5%;
         }
     }
@@ -196,7 +196,7 @@ $secondaryColor: rgb(182, 164, 83);
         background-color: rgba(0,0,0,.7);
         transition: all 1s ease-in-out;
         transform: translateX(-100%);
-        z-index: 6;
+        z-index: 10;
         -webkit-text-fill-color: inherit;
         -webkit-text-stroke: transparent;
         .reserve-content-wrapper {
@@ -260,70 +260,71 @@ $secondaryColor: rgb(182, 164, 83);
 
 .s-info {
     width: 100%;
-    height: 100vh;
+    height: fit-content;
+    padding: 30% 0;
     background-color: $secondaryColor;
     z-index: -10;
-    margin-top: 5%;
-    .headline {
-        color: white;
-        padding-top: 10%;
-        text-align: center;
-    }
-    .i-box {
-        color: white;
+    position: relative;
+    .s-info-container {
         width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        padding-left: 50%;
-        transform: translateX(-25%);
-        .i-news {
-            width: 50%;
-            position: relative;
-            .i-date {
-                font-size: 15px;
-                background-color: rgb(68, 68, 68);
-                text-align: center;
-                width: fit-content;
-                padding: 0px 5px 2px 5px;
-            }
-            .i-text {
-                font-size: 22px;
-                margin-bottom: 10px;
-            }
-            &::after {
-                content: "";
-                background-color: white;
-                width: 1px;
-                height:100%;
-                display: inline-block;
-                position: absolute;
-                top: 0;
-                left: 100%;
-            }
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        .headline {
+            margin-top: 20%;
+            color: white;
+            text-align: center;
         }
-        .i-takeout-btn {
-            font-size: 20px;
-            background-color: $primaryColor;
-            padding: 5px;
-            div {
-                border: 1px white solid;
-                padding: 7px 11px;
+        .i-box {
+            color: white;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-left: 50%;
+            transform: translateX(-25%);
+            margin-bottom: 20%;
+            .i-news {
+                width: 45%;
+                position: relative;
+                .i-date {
+                    font-size: 15px;
+                    background-color: rgb(68, 68, 68);
+                    text-align: center;
+                    width: fit-content;
+                    padding: 0px 5px 2px 5px;
+                }
+                .i-text {
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                }
+                &::after {
+                    content: "";
+                    background-color: white;
+                    width: 1px;
+                    height:100%;
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                }
+            }
+            .i-takeout-btn {
+                font-size: 20px;
+                background-color: $primaryColor;
+                padding: 5px;
+                div {
+                    border: 1px white solid;
+                    padding: 7px 11px;
+                }
             }
         }
     }
 }
 
 @include tabletHorizontal(){
-    .s-hero{
-        .hero{
-            .h-title{
-                color: goldenrod;
-                margin-top: 30%;
-            }
-        }
-    }
     .s-info {
         padding-top: 5%;
         height: fit-content;
