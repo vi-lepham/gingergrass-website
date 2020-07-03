@@ -171,9 +171,7 @@
 .s-hero .burger-menu-content {
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
   width: 100vw;
   z-index: 12;
   -webkit-transition: all 1s ease-in-out;
@@ -343,7 +341,7 @@
 }
 
 .s-concept {
-  height: 190vh;
+  height: 170vh;
   padding: 0 10vw;
 }
 
