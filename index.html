@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <!-- <section class="s-opening">
+    <section class="s-opening">
         <div class="o-logo">
             <div>
                 <h1>GINGER GRASS</h1>
@@ -25,11 +25,11 @@
         <div class="o-image">
             <div class="img"></div>
         </div>
-    </section> -->
+    </section>
     <main>
-        <section class="s-hero">
+        <section id="top" class="s-hero">
             <div class="nav">
-                <div class="reserve-btn"><a href="#">Reservation</a></div>
+                <div class="reserve-btn"><a href="#reserve">Reservation</a></div>
                 <div class="h-logo">
                     <h5>
                     GINGER GRASS
@@ -51,89 +51,69 @@
                     Experience a new tropical Asian taste
                 </div>
             </div> 
-            <div class="reserve-content">
-                <div class="reserve-content-wrapper">
-                    <div class="close-btn">
-                        <div class="line line1"></div>
-                        <div class="line line2"></div>
-                    </div>
-                    <div class="reserve-text">
-                        <h2>Request a table reservation</h2>
-                        <h4>We look forward to your request to reserve a table and will contact you as soon as possible. For children we recommend a restaurant visit from the age of 7.
-                            <br>
-                            Please note that fields marked with an asterisk * are required.
-                        </h4>
-                        <form id="reserve-form">
-                            <div class="input name-input">
-                                <label for="name">What's your name? *</label>
-                                <input id="name" type="text" placeholder="Your fullname">
-                                <small></small>
-                            </div>
-                            <div class="input time-input">
-                                <label for="time">When would you like to visit? *</label>
-                                <div class="inline-inputs">
-                                    <input type="date" id="date">
-                                    <input type="time" id="time">
-                                </div>
-                                <small></small>
-                            </div>
-                            <div class="input people-input">
-                                <label for="people">How many people would you like to reserve for? *</label>
-                                <input type="number" id="people" placeholder="Enter a number">
-                                <small></small>
-                            </div>
-                            <div class="input contact-input">
-                                <label for="contact">How can we contact you? *</label>
-                                <div class="inline-inputs">
-                                    <input type="email" id="email" placeholder="Your email">
-                                    <input type="number" id="phone" placeholder="Your phone number">
-                                </div>
-                                <small></small>
-                            </div>
-                            <div class="input request-input">
-                                <label for="request">Special information</label>
-                                <input type="text" id="request" placeholder="Such as allergies or special occasions (birthday party, wedding)">
-                            </div>
-                            <div class="policy-check">
-                                <input type="checkbox" id="policy">
-                                <label for="policy">I agree to Privacy Policy *</label>
-                                <small></small>
-                            </div>
-                            <div class="submit-btn">
-                                <input type="submit" value="Submit">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
             <div class="burger-menu-content">
                 <ul>
-                    <li>TOP</li>
-                    <li>NEWS</li>
-                    <li>CONCEPT</li>
-                    <li>MENU</li>
-                    <li>ACCESS</li>
+                    <li><a href="#top">TOP</a></li>
+                    <li><a href="#concept">CONCEPT</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#access">ACCESS</a></li>
                     <li class="line"></li>
-                    <li class="reserve-btn">Reservation</li>
+                    <li class="reserve-btn"><a href="#reserve">Reservation</a></li>
                 </ul>
             </div>
         </section>
-        <section class="s-info">
-            <div class="s-info-container">
-                <div class="headline">INFO</div>
-                <div class="i-box">
-                    <div class="i-news">
-                        <div class="i-date">2020.06.15</div>
-                        <div class="i-text">20% for Take Out Orders</div>
-                        <div class="i-date">2020.06.15</div>
-                        <div class="i-text">20% for Take Out Orders</div>
-                    </div>
-                    <div class="i-takeout">
-                        <div class="i-takeout-btn"><div>
-                            Online Takeout
-                        </div></div>
-                    </div>
+        <section id="reserve" class="s-reserve">
+            
+            <div class="reserve-content">
+                <div class="reserve-content-wrapper">
+                    <form id="reserve-form">
+                        <div class="input name-input">
+                            <label for="name">What's your name? *</label>
+                            <input id="name" type="text" placeholder="Your fullname">
+                            <small></small>
+                        </div>
+                        <div class="input time-input">
+                            <label for="time">When would you like to visit? *</label>
+                            <div class="inline-inputs">
+                                <input type="date" id="date">
+                                <input type="time" id="time">
+                            </div>
+                            <small></small>
+                        </div>
+                        <div class="input people-input">
+                            <label for="people">How many people would you like to reserve for? *</label>
+                            <input type="number" id="people" placeholder="Enter a number">
+                            <small></small>
+                        </div>
+                        <div class="input contact-input">
+                            <label for="contact">How can we contact you? *</label>
+                            <div class="inline-inputs">
+                                <input type="email" id="email" placeholder="Your email">
+                                <input type="number" id="phone" placeholder="Your phone number">
+                            </div>
+                            <small></small>
+                        </div>
+                        <div class="input request-input">
+                            <label for="request">Special information</label>
+                            <input type="text" id="request" placeholder="Such as allergies or special occasions (birthday party, wedding)">
+                        </div>
+                        <div class="policy-check">
+                            <input type="checkbox" id="policy">
+                            <label for="policy">I agree to Privacy Policy *</label>
+                            <small></small>
+                        </div>
+                        <div class="submit-btn">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
                 </div>
+            </div>
+            <div class="reserve-title">
+                <div class="headline">BOOK A TABLE</div>
+                <h4>We look forward to your request to reserve a table and will contact you as soon as possible. For children we recommend a restaurant visit from the age of 7.
+                    <br>
+                    Please note that fields marked with an asterisk * are required.
+                </h4>
             </div>
         </section>
         <section class="s-concept">
@@ -160,13 +140,9 @@
         <section class="s-menu">
             <div class="headline">MENU</div>
             <div class="s-menu-container">
-                <ul class="toggle-menu">
-                    <li class="displayed">
-                        <div class="menu-container">
-                            <div class="m-head">Lunch Course </div>
-                        </div>
-                    </li>
-                </ul>
+                <div class="menu-content">
+                    <div class="menu-content-wrapper"></div>
+                </div>
                 <div class="menu-background">
                     <img src="./images/spicy-noodles.jpg" alt="">
                 </div>
@@ -177,11 +153,11 @@
             <div class="headline">ACCESS & INFO</div>
             <div class="a-content">
                 <div class="a-info">
-                    <div class="info-1">
+                    <div class="info">
                         <div class="address">
                             〒151-0053
                             <br>
-                            東京都渋谷区代々木二丁目2番1号 小田急サザンタワー１階
+                            Tokyo, Shibuya, Yoyogi 2-2-1. Odakyuu Southern Tower 1st Floor
                         </div>
                         <div class="phone">
                             03-6630-0004
@@ -190,11 +166,12 @@
                             gingergrass@huge.co.jp
                         </div>
                     </div>
-                    <div class="info-2">
-                    </div>
                 </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12962.481781331446!2d139.7004773!3d35.6863467!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f6efc05f5246fca!2sGINGER%20GRASS%20modern%20thai%20vietnamese!5e0!3m2!1sen!2sjp!4v1590309475237!5m2!1sen!2sjp" width="600" height="450" frameborder="-0" style="border:-0;" allowfullscreen="" aria-hidden="false" tabindex="-0"></iframe>
             </div>
+        </section>
+        <section class="footer">
+            Designed and built by Pham Le Vi &copy;2020
         </section>
     </main>
 
@@ -202,4 +179,5 @@
     integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
