@@ -101,35 +101,34 @@ class Form {
         }
         if (email.value === '' || phone.value === '') {
             Form.displayError(email, 'Contact is required')
+            console.log(email.value)
         }
         if (!checkBox.checked) {
             Form.displayError(checkBox, 'Please agree to our Privacy Policy');
         }
-
-
     }
 }
 
 // Event Listener for form submit
 const reserveForm = document.querySelector('form')
-reserveForm.addEventListener('submit', e => {
-  e.preventDefault();
-
-  const formData = new FormData(talkForm);
-  fetch(talkForm.getAttribute('action'), {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
-      'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-    },
-    body: new URLSearchParams(formData).toString()
-  })
-  .then(res => {
-    if (res) {
-        alert('worked');
-    }
-  });
-});
+reserveForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    Form.checkInputs();
+    const formData = new FormData(talkForm);
+    fetch(talkForm.getAttribute('action'), {
+        method: 'POST',
+        headers: {
+        'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
+        body: new URLSearchParams(formData).toString()
+    })
+    .then(res => {
+        if (res) {
+            alert('worked');
+        }
+    });
+})
 
 
 // Intersection Observer for Nav
