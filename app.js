@@ -129,11 +129,24 @@ class Form {
 }
 
 // Event Listener for form submit
-const reserveForm = document.querySelector('form')
-reserveForm.addEventListener('submit', (e) => {
+const reserveForm = document.querySelector('form');
+reserveForm.addEventListener('submit', e => {
     e.preventDefault();
     Form.checkInputs();
     Form.clearInputs();
+    const formData = new FormData(reserveForm);
+
+    fetch(reserveForm.getAttribute('action'), {
+        method: "POST",
+        headers: { 
+            'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+            'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
+        body: new URLSearchParams(formData).toString()
+      })
+    .then(res => console.log(res))
+    .catch(err => console.log(err.message));
+    
 })
 
 
