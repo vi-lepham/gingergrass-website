@@ -228,9 +228,11 @@ $secondaryColor:rgb(143, 119, 10);
                     flex-direction: column;
                     margin-bottom: 10px;
                     input {
-                        height: 7vh;
+                        height: 5vh;
                         min-width: 45%;
                         font-size: 15px;
+                        color: wheat;
+                        margin-top: 10px;
                     }
                 }
                 .inline-inputs {
