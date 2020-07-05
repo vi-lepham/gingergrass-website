@@ -120,8 +120,10 @@ talkForm.addEventListener('submit', (e) => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formData
     })
-    .then(() => {
-        alert('worked')
+    .then(res => {
+        if (res) {
+            alert('worked');
+        }
     })
 })
 
