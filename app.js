@@ -78,6 +78,10 @@ class Form {
         const errorMsg = inputType.querySelector('small');
         
         errorMsg.textContent = msg;
+
+        setTimeout(() => {
+            errorMsg.remove();
+        }, 3000)
     }
     static checkInputs() {
         const name = document.getElementById('name');
@@ -85,7 +89,7 @@ class Form {
         const time = document.getElementById('time');
         const people = document.getElementById('people');
         const email = document.getElementById('email');
-        const phone = document.getElementById('name');
+        const phone = document.getElementById('phone');
         const checkBox = document.getElementById('policy');
         if (name.value.trim() === '') {
             Form.displayError(name, 'Name is required')
@@ -101,33 +105,35 @@ class Form {
         }
         if (email.value === '' || phone.value === '') {
             Form.displayError(email, 'Contact is required')
-            console.log(email.value)
         }
         if (!checkBox.checked) {
             Form.displayError(checkBox, 'Please agree to our Privacy Policy');
         }
     }
+    static clearInputs() {
+        const name = document.getElementById('name');
+        const date = document.getElementById('date');
+        const time = document.getElementById('time');
+        const people = document.getElementById('people');
+        const email = document.getElementById('email');
+        const phone = document.getElementById('phone');
+        const checkBox = document.getElementById('policy');
+        name.value = '';
+        date.value = '';
+        time.value = '';
+        people.value = '';
+        email.value = '';
+        phone.value = '';
+        checkBox.checked = false;
+    }
 }
 
 // Event Listener for form submit
 const reserveForm = document.querySelector('form')
-reserveForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+reserveForm.addEventListener('submit', () => {
+    
     Form.checkInputs();
-    const formData = new FormData(talkForm);
-    fetch(talkForm.getAttribute('action'), {
-        method: 'POST',
-        headers: {
-        'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
-        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-        },
-        body: new URLSearchParams(formData).toString()
-    })
-    .then(res => {
-        if (res) {
-            alert('worked');
-        }
-    });
+    Form.clearInputs();
 })
 
 
