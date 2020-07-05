@@ -130,8 +130,8 @@ class Form {
 
 // Event Listener for form submit
 const reserveForm = document.querySelector('form')
-reserveForm.addEventListener('submit', () => {
-    
+reserveForm.addEventListener('submit', (e) => {
+    e.preventDefault();
     Form.checkInputs();
     Form.clearInputs();
 })
