@@ -110,9 +110,19 @@ class Form {
 }
 
 // Event Listener for form submit
-document.querySelector('form').addEventListener('submit', (e) => {
+const talkForm = document.querySelector('form')
+talkForm.addEventListener('submit', (e) => {
     e.preventDefault();
     Form.checkInputs();
+    let formData = new FormData(talkForm);
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData
+    })
+    .then(() => {
+        alert('worked')
+    })
 })
 
 
