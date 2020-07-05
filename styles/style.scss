@@ -114,6 +114,7 @@ input {
     font: inherit;
     outline: none;
     box-shadow: none;
+    width: 100%;
     &::placeholder {
         color: white;
         opacity: .7;
@@ -131,7 +132,10 @@ input[type="time"] {
     opacity: .7;
     padding: 2%;
 }
-
+input[type="checkbox"] {
+    width: fit-content;
+    margin-right: 10px;
+}
 input[type="submit"] {
     background-color: white;
     color: $primaryColor;

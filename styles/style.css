@@ -260,6 +260,10 @@
   margin-bottom: 7px;
 }
 
+.s-reserve .reserve-content .reserve-content-wrapper #reserve-form label .label {
+  margin-bottom: 10px;
+}
+
 .s-reserve .reserve-content .reserve-content-wrapper #reserve-form .input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,6 +291,10 @@
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.s-reserve .reserve-content .reserve-content-wrapper #reserve-form .inline-inputs input {
+  width: 40%;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -632,6 +640,7 @@ input {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+  width: 100%;
 }
 
 input::-webkit-input-placeholder {
@@ -668,6 +677,13 @@ input[type="time"] {
   color: white;
   opacity: .7;
   padding: 2%;
+}
+
+input[type="checkbox"] {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 10px;
 }
 
 input[type="submit"] {

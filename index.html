@@ -68,38 +68,46 @@
                 <div class="reserve-content-wrapper">
                     <form id="reserve-form" name="reservation" action="/#reserve" method="POST" data-netlify="true">
                         <div class="input name-input">
-                            <label for="name">What's your name? *</label>
-                            <input id="name" name="Name" type="text" placeholder="Your name">
+                            <label for="name"> 
+                                <div class="label">What's your name? *</div>
+                                <input id="name" name="Name" type="text" placeholder="Your name"></label>
                             <small></small>
                         </div>
                         <div class="input time-input">
-                            <label for="time">When would you like to visit? *</label>
-                            <div class="inline-inputs">
-                                <input type="date" id="date">
-                                <input type="time" id="time" name="Time">
-                            </div>
+                            <label for="time">
+                                <div class="label">When would you like to visit? *</div>
+                                <div class="inline-inputs">
+                                    <input type="date" id="date">
+                                    <input type="time" id="time" name="Time">
+                                </div>
+                            </label>
                             <small></small>
                         </div>
                         <div class="input people-input">
-                            <label for="people">How many people would you like to reserve for? *</label>
-                            <input type="number" id="people" name="Number Of People" placeholder="Enter a number">
+                            <label for="people">
+                                <div class="label">How many people would you like to reserve for? *</div>
+                                <input type="number" id="people" name="Number Of People" placeholder="Enter a number">
+                            </label>
                             <small></small>
                         </div>
                         <div class="input contact-input">
-                            <label for="contact">How can we contact you? *</label>
-                            <div class="inline-inputs">
-                                <input type="email" id="email" placeholder="Your email">
-                                <input type="tel" id="phone" name="Phone number" placeholder="Your phone number">
-                            </div>
+                            <label for="contact">
+                                <div class="label">How can we contact you? *</div>
+                                <div class="inline-inputs">
+                                    <input type="email" id="email" placeholder="Your email">
+                                    <input type="tel" id="phone" name="Phone number" placeholder="Your phone number">
+                                </div>
+                            </label>
                             <small></small>
                         </div>
                         <div class="input request-input">
-                            <label for="request">Special information</label>
-                            <input type="text" id="request" name="Special requests" placeholder="Such as allergies or special occasions (birthday party, wedding)">
+                            <label for="request">
+                                <div class="label">Special information</div> 
+                                <input type="text" id="request" name="Special requests" placeholder="Such as allergies or special occasions (birthday party, wedding)">
+                            </label>
                         </div>
                         <div class="policy-check">
-                            <input type="checkbox" id="policy" name="Policy Agreement">
-                            <label for="policy">I agree to Privacy Policy *</label>
+                            <label for="policy"><input type="checkbox" id="policy" name="Policy Agreement">I agree to Privacy Policy *</label>
                             <small></small>
                         </div>
                         <div class="submit-btn">

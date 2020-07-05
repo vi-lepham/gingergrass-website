@@ -222,6 +222,9 @@ $secondaryColor:rgb(143, 119, 10);
                 label {
                     font-size: 15px;
                     margin-bottom: 7px;
+                    .label {
+                        margin-bottom: 10px;
+                    }
                 }
                 .input {
                     display: flex;
@@ -238,6 +241,9 @@ $secondaryColor:rgb(143, 119, 10);
                     display: flex;
                     justify-content: space-between;
                     flex-wrap: wrap;
+                    input {
+                        width: 40%
+                    }
                 }
             }
         }
