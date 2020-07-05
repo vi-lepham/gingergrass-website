@@ -289,10 +289,7 @@
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.s-reserve .reserve-content .reserve-content-wrapper #reserve-form .inline-inputs input {
-  width: 40%;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 1100px) {
