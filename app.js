@@ -60,7 +60,7 @@ document.querySelector('.burger-btn').addEventListener('click', () => {
 })
 
 // Event Listener for click in any burger menu options
-const burgerOptions = document.querySelectorAll('.burger-menu-content ul li a');
+const burgerOptions = document.querySelectorAll('.burger-menu-content ul li');
 burgerOptions.forEach(option => {
     option.addEventListener('click', () => {
         UI.toggleBurger();

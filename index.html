@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
     <title>新宿のタイ・ベトナム料理|GINGER GRASS(ジンジャーグラス) | 株式会社HUGE（ヒュージ）</title>
@@ -52,14 +53,16 @@
                 </div>
             </div> 
             <div class="burger-menu-content">
-                <ul>
-                    <li><a href="#top">TOP</a></li>
-                    <li><a href="#concept">CONCEPT</a></li>
-                    <li><a href="#menu">MENU</a></li>
-                    <li><a href="#access">ACCESS</a></li>
-                    <li class="line"></li>
-                    <li class="reserve-btn"><a href="#reserve">Reservation</a></li>
-                </ul>
+                <div class="burger-menu-wrapper">
+                    <ul>
+                        <li><a href="#top">TOP</a></li>
+                        <li><a href="#concept">CONCEPT</a></li>
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="#access">ACCESS</a></li>
+                        <li class="line"></li>
+                        <li class="reserve-btn"><a href="#reserve">Reservation</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="s-reserve">
@@ -129,7 +132,7 @@
                 </h4>
             </div>
         </section>
-        <section class="s-concept">
+        <section id="concept" class="s-concept">
             <div class="headline">CONCEPT</div>
             <div class="c-box1">
                 <div class="c-content">
@@ -150,11 +153,159 @@
                 </div>
             </div>
         </section>
-        <section class="s-menu">
+        <section id="menu" class="s-menu">
             <div class="headline">MENU</div>
             <div class="s-menu-container">
                 <div class="menu-content">
-                    <div class="menu-content-wrapper"></div>
+                    <div class="bites-title bordered">BITES</div>
+                    <div class="bites bordered">
+                        <p>Flavourful bite-sized appetizers to open up your palette!</p>
+                        <div class="menu-item">
+                            <h3>MIANG KHAM</h3>
+                            <p>300</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>MA HO - Pork and Pineapple</h3>
+                            <p>300</p>
+                        </div>
+                    </div>
+                    <div class="appe-title bordered" >APPETIZERS</div>
+                    <div class="appetizers bordered">
+                        <div class="menu-item">
+                            <h3>CELERY AND MYOGA PICKLES</h3>
+                            <p>350</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>GOI CUON</h3>
+                            <p>S 500 / L 800</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>DEEP FRIED SPRING ROLLS</h3>
+                            <p>950</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>SHRIMP TOAST</h3>
+                            <p>S 500 / L 800</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>PAD PHOON FAIDEN</h3>
+                            <p>850</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>BANH XEO</h3>
+                            <p>1200</p>
+                        </div>
+                    </div>
+                    <div class="s-s-title bordered">SALAD & SOUP</div>
+                    <div class="salad-soup bordered">
+                        <div class="menu-item">
+                            <h3>YUM WOON SEN</h3>
+                            <p>800</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>THAI SLAW SALAD</h3>
+                            <p>1100</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>SOM TUM</h3>
+                            <p>S 550 / L 950</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>TOM YUM KUNG</h3>
+                            <p>S 750 / L 1350</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>VIETNAMESE TOFU SOUP</h3>
+                            <p>S 650 / L 1250</p>
+                        </div>
+                    </div>
+                    <div class="main-title bordered">MAIN</div>
+                    <div class="main-curry bordered">
+                        <div class="block-1">
+                            <div class="menu-item">
+                                <h3>GAI YAANG</h3>
+                                <p>1900</p>
+                            </div>
+                            <div class="menu-item">
+                                <h3>SPICE GRILLED BEEF STEAK</h3>
+                                <p>2500</p>
+                            </div>
+                            <div class="menu-item">
+                                <h3>PRAWN AND SCALLOPS</h3>
+                                <p>1900</p>
+                            </div>
+                            <div class="menu-item">
+                                <h3>STIR FRIED SOFT SHELL CRAB</h3>
+                                <p>1250</p>
+                            </div>
+                            <div class="menu-item">
+                                <h3>BAI GAPRAO</h3>
+                                <p>1100</p>
+                            </div>
+                        </div>
+                        <div class="block-2">
+                            <div class="menu-item">
+                                <h3>POO PAD PONG CURRY</h3>
+                                <p>2200</p>
+                            </div>
+                            <div class="menu-item">
+                                <h3>GREEN CURRY</h3>
+                                <p>1100</p>
+                            </div>
+                            <div class="menu-item">
+                                <h3>TOM YAM FRIED RICE</h3>
+                                <p>1100</p>
+                            </div>
+                        </div>
+                        <div class="block-3">
+                            <div class="menu-item">
+                                <h3>JASMINE RICE</h3>
+                                <p>S 300 / L 500</p>
+                            </div>
+                            <div class="menu-item">
+                                <h3>PHAO</h3>
+                                <p>300</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="noodles-title bordered">NOODLES</div>
+                    <div class="noodles bordered">
+                        <div class="menu-item">
+                            <h3>PHO GA</h3>
+                            <p>1200</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>PHO BO</h3>
+                            <p>1600</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>KHAO SOI</h3>
+                            <p>1200</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>PAD THAI</h3>
+                            <p>1200</p>
+                        </div>
+                        <div class="menu-item">
+                            <h3>BAH MEE HAENG</h3>
+                            <p>1200</p>
+                        </div>
+                    </div>
+                    <div class="noodle-options bordered">
+                        <p>You can choose the type of noodles:</p>
+                        <div class="menu-item">
+                            <h3>PHO</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3>BUN</h3>
+                        </div>
+                        <div class="menu-item">
+                            <h3>SPECIAL CHIJIRE</h3>
+                        </div>
+                    </div>
+                    <div class="additional-info">
+                        <p>Please specify with our staff if you have any allergies or dietary requirements</p>
+                    </div>
                 </div>
                 <div class="menu-background">
                     <img src="./images/spicy-noodles.jpg" alt="">
@@ -162,7 +313,7 @@
             </div>
         </section>
 
-        <section class="s-access">
+        <section id="access" class="s-access">
             <div class="headline">ACCESS & INFO</div>
             <div class="a-content">
                 <div class="a-info">
