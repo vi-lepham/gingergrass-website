@@ -339,6 +339,9 @@
   .s-hero .nav .h-logo h5 {
     font-size: 20px;
   }
+  .s-hero .nav .h-logo p {
+    font-size: 13px;
+  }
   .s-hero .hero {
     height: 100vh;
   }
@@ -806,6 +809,9 @@
   }
   .s-menu .s-menu-container .menu-content {
     font-size: 10px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 

@@ -1,30 +1,6 @@
 // Opening
 
-TweenMax.staggerFrom(".o-logo div", 1.5, {
-    opacity: 0,
-    y: 50,
-    ease: Expo.easeInOut
-}, 0.2)
 
-TweenMax.from(".o-image", 1.5, {
-    height: 0,
-    delay: 1,
-    ease: Expo.easeInOut
-})
-
-TweenMax.from(".s-opening", 2, {
-    opacity: 1,
-    height: "100vh",
-    delay: 2.5,
-    ease: Expo.easeInOut
-})
-
-TweenMax.from(".main", 2, {
-    overflow: "hidden",
-    height: 0,
-    delay: 2.8,
-    ease: Expo.easeInOut
-})
 
 // UI Class
 class UI {
