@@ -246,6 +246,7 @@ $primaryColor: rgb(182, 164, 83);
 
 @include mobileVertical() {
     .s-concept{
+        margin-top: 10%;
         .c-box1{
             flex-direction: column;
             .c-content {
@@ -277,7 +278,7 @@ $primaryColor: rgb(182, 164, 83);
         .s-menu-container {
             .menu-content {
                 font-size: 10px;
-                height: fit-content;
+                height: 60vh;
             }
         }
     }

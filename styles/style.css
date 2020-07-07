@@ -773,6 +773,9 @@
 }
 
 @media (max-width: 400px) {
+  .s-concept {
+    margin-top: 10%;
+  }
   .s-concept .c-box1 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -809,9 +812,7 @@
   }
   .s-menu .s-menu-container .menu-content {
     font-size: 10px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 60vh;
   }
 }
 
