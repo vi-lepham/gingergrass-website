@@ -294,16 +294,7 @@
   margin-top: 10px;
 }
 
-@media (max-width: 800px) {
-  .s-opening .o-logo h1 {
-    font-size: 4rem;
-  }
-  .s-opening .o-logo p {
-    font-size: 1.5rem;
-  }
-  .s-opening .o-image {
-    width: 60vw;
-  }
+@media (max-width: 1100px) {
   .s-hero .hero .h-title {
     font-size: 4.5rem;
     width: 80%;
@@ -734,7 +725,7 @@
   font-size: 15px;
 }
 
-@media (max-width: 830px) {
+@media (max-width: 1100px) {
   .s-concept {
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -986,7 +977,7 @@ input[type="submit"] {
   opacity: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
   .headline {
     font-size: 3rem;
   }

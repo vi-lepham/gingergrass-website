@@ -16,14 +16,8 @@
 }
 
 @mixin tabletVertical {
-    @media (max-width: 800px) {
-        @content;
-    }
-}
-
-@mixin tabletHorizontal {
     @media (max-width: 1100px) {
-
+        @content;
     }
 }
 
@@ -61,8 +55,6 @@ $secondaryColor:rgb(143, 119, 10);
             background-position: 50%;
             background-size: cover;
             height: 101%;
-
-            
         }
     }
 }
@@ -251,19 +243,7 @@ $secondaryColor:rgb(143, 119, 10);
 }
 
 @include tabletVertical(){
-    .s-opening {
-        .o-logo {
-            h1 {
-                font-size: 4rem;
-            }
-            p {
-                font-size: 1.5rem;
-            }
-        }
-        .o-image {
-            width: 60vw;
-        }
-    }
+    
     .s-hero {
         .hero {
             .h-title{
