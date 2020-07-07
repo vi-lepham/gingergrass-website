@@ -1,23 +1,23 @@
 // Opening
 
-TweenMax.staggerFrom(".o-logo div", 1.5, {
-    opacity: 0,
-    y: 50,
-    ease: Expo.easeInOut
-}, 0.2)
+// TweenMax.staggerFrom(".o-logo div", 1.5, {
+//     opacity: 0,
+//     y: 50,
+//     ease: Expo.easeInOut
+// }, 0.2)
 
-TweenMax.to(".o-image", 1.5, {
-    height: '60vh',
-    delay: 1.6,
-    ease: Expo.easeInOut
-})
+// TweenMax.to(".o-image", 1.5, {
+//     height: '60vh',
+//     delay: 1.6,
+//     ease: Expo.easeInOut
+// })
 
-TweenMax.to(".s-opening", 2, {
-    opacity: 0,
-    height: 0,
-    delay: 2.7,
-    ease: Expo.easeInOut
-})
+// TweenMax.to(".s-opening", 2, {
+//     opacity: 0,
+//     height: 0,
+//     delay: 2.7,
+//     ease: Expo.easeInOut
+// })
 
 TweenMax.to("main", 2, {
     overflow: 'visible',
