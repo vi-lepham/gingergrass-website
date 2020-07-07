@@ -19,12 +19,12 @@
 //     ease: Expo.easeInOut
 // })
 
-TweenMax.to("main", 2, {
-    overflow: 'visible',
-    height: '100%',
-    delay: 3,
-    ease: Expo.easeInOut
-})
+// TweenMax.to("main", 2, {
+//     overflow: 'visible',
+//     height: '100%',
+//     delay: 3,
+//     ease: Expo.easeInOut
+// })
 
 // UI Class
 class UI {

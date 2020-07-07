@@ -820,8 +820,6 @@ body {
 }
 
 main {
-  overflow: hidden;
-  height: 0;
   width: 100%;
   position: relative;
   top: 0;
