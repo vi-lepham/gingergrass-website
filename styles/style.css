@@ -24,7 +24,7 @@
 }
 
 .s-opening .o-image {
-  width: 25vw;
+  width: 25%;
   height: 0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -295,12 +295,20 @@
 }
 
 @media (max-width: 1100px) {
+  .s-hero .nav {
+    width: 100vw;
+  }
+  .s-hero .hero {
+    overflow: hidden;
+  }
   .s-hero .hero .h-title {
     font-size: 4.5rem;
     width: 80%;
+    color: wheat;
   }
   .s-hero .hero .h-image {
-    width: 90%;
+    width: 100%;
+    left: 0;
   }
   .s-hero .hero .h-image img {
     width: 100%;
@@ -732,7 +740,7 @@
     height: fit-content;
   }
   .s-concept .c-box2 {
-    margin-top: -5%;
+    margin-top: -13%;
   }
   .s-concept .c-box2 .ginger-img {
     -webkit-transform: translateY(0);
@@ -745,7 +753,7 @@
     font-size: 11px;
   }
   .s-menu .s-menu-container {
-    height: 53vh;
+    height: 48vh;
   }
   .s-menu .s-menu-container .menu-content {
     width: 90%;
