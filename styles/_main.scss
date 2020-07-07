@@ -37,11 +37,12 @@ $primaryColor: rgb(182, 164, 83);
         }
     }
     .c-box2 {
-        margin-top: -7%;
+        margin-top: -10%;
         .ginger-img {
             width: 45%;
             object-fit: cover;
             overflow: hidden;
+            transform: translateY(-25%);
             img{
                 width: 100%;
                 transform: translateY(-20%);
@@ -273,12 +274,13 @@ $primaryColor: rgb(182, 164, 83);
         }
     }
     .s-menu {
-        .menu-list{
-            width: 100%;
-            display:flex;
-            font-size: 20px;
-            padding-left: 5%;
-            top: 10%;
+        .headline{
+            margin-bottom: 10%;
+        }
+        .s-menu-container {
+            .menu-content {
+                font-size: 10px;
+            }
         }
     }
 }

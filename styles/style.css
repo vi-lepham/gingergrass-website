@@ -44,17 +44,12 @@
   background-position: 50%;
   background-size: cover;
   height: 101%;
-  -webkit-animation: imageAppear 1s linear;
-          animation: imageAppear 1s linear;
-  -webkit-animation-delay: 2.2s;
-          animation-delay: 2.2s;
 }
 
 .s-hero {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
 .s-hero .nav {
@@ -154,12 +149,12 @@
 }
 
 .s-hero .hero .h-image img {
-  height: 100%;
+  width: 100%;
 }
 
 .s-hero .hero .h-title {
   font-size: 5rem;
-  color: white;
+  color: #b6a453;
   z-index: 12;
   position: absolute;
   top: 50%;
@@ -236,7 +231,7 @@
   background-color: #b6a453;
   position: relative;
   color: white;
-  padding: 10%;
+  padding: 10% 15%;
 }
 
 .s-reserve .reserve-title {
@@ -374,6 +369,7 @@
     padding: 15%;
   }
   .s-reserve .reserve-title .headline {
+    color: whitesmoke;
     font-size: 2rem;
     margin-right: 0;
   }
@@ -449,7 +445,7 @@
 }
 
 .s-concept .c-box2 {
-  margin-top: -7%;
+  margin-top: -10%;
 }
 
 .s-concept .c-box2 .ginger-img {
@@ -457,6 +453,8 @@
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
 }
 
 .s-concept .c-box2 .ginger-img img {
@@ -804,14 +802,11 @@
     margin-top: 5%;
     width: 100%;
   }
-  .s-menu .menu-list {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 20px;
-    padding-left: 5%;
-    top: 10%;
+  .s-menu .headline {
+    margin-bottom: 10%;
+  }
+  .s-menu .s-menu-container .menu-content {
+    font-size: 10px;
   }
 }
 

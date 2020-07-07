@@ -62,8 +62,7 @@ $secondaryColor:rgb(143, 119, 10);
             background-size: cover;
             height: 101%;
 
-            animation: imageAppear 1s linear;
-            animation-delay: 2.2s;
+            
         }
     }
 }
@@ -72,7 +71,7 @@ $secondaryColor:rgb(143, 119, 10);
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    
     .nav {
         display: flex;
         justify-content: space-between;
@@ -138,12 +137,12 @@ $secondaryColor:rgb(143, 119, 10);
             left: 50%;
             
             img{
-                height: 100%;
+                width: 100%;
             }
         }
         .h-title {
             font-size: 5rem;
-            color: white;
+            color: $primaryColor;
             z-index: 12;
             position: absolute;
             top: 50%;
@@ -204,7 +203,7 @@ $secondaryColor:rgb(143, 119, 10);
     background-color: $primaryColor;
     position: relative;
     color: white;
-    padding: 10%;
+    padding: 10% 15%;
     .reserve-title {
         width: 400px;
         .headline {
@@ -335,6 +334,7 @@ $secondaryColor:rgb(143, 119, 10);
         padding: 15%;
         .reserve-title {
             .headline {
+                color: whitesmoke;
                 font-size: 2rem;
                 margin-right: 0;
             }
