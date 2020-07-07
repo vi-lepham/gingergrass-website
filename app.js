@@ -12,14 +12,8 @@ TweenMax.to(".o-image", 1.5, {
     ease: Expo.easeInOut
 })
 
-TweenMax.to(".img", 1.5, {
-    height: '100%',
-    delay: 2.3,
-    ease: Expo.easeInOut
-})
-
 TweenMax.to(".s-opening", 2, {
-    y: '-100vh',
+    opacity: 0,
     height: 0,
     delay: 2.7,
     ease: Expo.easeInOut
