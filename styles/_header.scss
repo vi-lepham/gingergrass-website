@@ -27,7 +27,8 @@ $secondaryColor:rgb(143, 119, 10);
 
 .s-opening {
     width: 100%;
-    height: 100vh;
+    height: 0;
+    opacity: 0;
     position: relative;
     top: 0;
     z-index: -1;
@@ -43,7 +44,7 @@ $secondaryColor:rgb(143, 119, 10);
     }
     .o-image {
         width: 25%;
-        height: 0;
+        height: 60vh;
         object-fit: cover;
         overflow: hidden;
         z-index: -1;

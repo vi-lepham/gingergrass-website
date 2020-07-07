@@ -1,6 +1,7 @@
 .s-opening {
   width: 100%;
-  height: 100vh;
+  height: 0;
+  opacity: 0;
   position: relative;
   top: 0;
   z-index: -1;
@@ -25,7 +26,7 @@
 
 .s-opening .o-image {
   width: 25%;
-  height: 0;
+  height: 60vh;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
@@ -829,6 +830,8 @@ body {
 
 main {
   width: 100%;
+  height: 100%;
+  overflow: visible;
   position: relative;
   top: 0;
 }
