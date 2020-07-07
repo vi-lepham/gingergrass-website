@@ -84,10 +84,6 @@
   z-index: 6;
 }
 
-.s-hero .nav .h-logo h2 {
-  font-size: 25px;
-}
-
 .s-hero .nav .h-logo p {
   font-size: 15px;
   font-weight: bold;
@@ -339,6 +335,9 @@
   .s-hero .nav .h-logo {
     -webkit-transform: translateX(-10%);
             transform: translateX(-10%);
+  }
+  .s-hero .nav .h-logo h5 {
+    font-size: 20px;
   }
   .s-hero .hero {
     height: 100vh;

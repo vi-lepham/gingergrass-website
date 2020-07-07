@@ -8,21 +8,21 @@ TweenMax.staggerFrom(".o-logo div", 1.5, {
 
 TweenMax.from(".o-image", 1.5, {
     height: 0,
-    delay: 1.6,
+    delay: 1,
     ease: Expo.easeInOut
 })
 
 TweenMax.from(".s-opening", 2, {
     opacity: 1,
     height: "100vh",
-    delay: 2.7,
+    delay: 2.5,
     ease: Expo.easeInOut
 })
 
 TweenMax.from(".main", 2, {
     overflow: "hidden",
     height: 0,
-    delay: 3,
+    delay: 2.8,
     ease: Expo.easeInOut
 })
 
@@ -34,13 +34,8 @@ class UI {
         const logo = document.querySelector('.h-logo');
         burger.classList.toggle('active');
         setTimeout(() => {
-            if(burger.classList.contains('active')) {
-                reserveBtn.classList.add('hide');
-                logo.classList.add('hide');
-            } else {
-                reserveBtn.classList.remove('hide');
-                logo.classList.remove('hide');
-            }
+            reserveBtn.classList.toggle('hide');
+            logo.classList.toggle('hide');
         }, 500); 
     }
     static animateBurgerIcon = () => {

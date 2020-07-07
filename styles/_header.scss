@@ -1,7 +1,4 @@
-@mixin fullWH {
-    width: 100%;
-    height: 100vh;
-}
+
 @mixin center {
     position: absolute;
     top: 50%;
@@ -85,9 +82,6 @@ $secondaryColor:rgb(143, 119, 10);
             transition: all 0.3s ease-in-out;
             transform: translateX(-15%);
             z-index: 6;
-            h2 {
-                font-size: 25px;
-            }
             p {
                 font-size: 15px;
                 font-weight: bold;
@@ -244,7 +238,6 @@ $secondaryColor:rgb(143, 119, 10);
 }
 
 @include tabletVertical(){
-
     .s-hero {
         .nav {
             width: 100vw;
@@ -288,7 +281,10 @@ $secondaryColor:rgb(143, 119, 10);
                 display: none;
             }
             .h-logo {
-                transform: translateX(-10%)
+                transform: translateX(-10%);
+                h5{
+                    font-size: 20px;
+                }
             }
         }
         .hero {
