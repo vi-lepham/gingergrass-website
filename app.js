@@ -182,18 +182,4 @@ const observerNav = new IntersectionObserver(function(entries, observer) {
 
 observerNav.observe(hero);
 
-// Intersection Observer for lazy load items
-const lazyLoad = document.querySelectorAll('.lazy-load');
-const observerLazyLoad = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            return;
-        } 
-        loadElement(entry.target);
-        observer.unobserve(entry.target);
-    })
-}, {threshold: 0.2})
-
-lazyLoad.forEach(item => observerLazyLoad.observe(item))
-
 
