@@ -194,8 +194,9 @@ $primaryColor: rgb(182, 164, 83);
         flex-wrap: wrap-reverse;
         margin-left: 5%;
         width: 90%;
-        iframe {
+        .map {
             width: 50%;
+            overflow: hidden;
         }
         .a-info {
             margin-top: 5%;

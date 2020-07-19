@@ -762,8 +762,9 @@
   width: 90%;
 }
 
-.s-access .a-content iframe {
+.s-access .a-content .map {
   width: 50%;
+  overflow: hidden;
 }
 
 .s-access .a-content .a-info {
@@ -1028,6 +1029,12 @@ input[type="submit"] {
 
 .reserve-btn.hide, .h-logo.hide {
   opacity: 0;
+}
+
+.lazy-load {
+  display: none;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
 }
 
 @media (max-width: 1100px) {
