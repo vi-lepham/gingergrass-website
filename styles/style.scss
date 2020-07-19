@@ -156,15 +156,6 @@ input[type="submit"] {
     opacity: 0;
 }
 
-.lazy-load {
-    opacity: 0;
-    transition: ease-in 0.8s all;
-}
-
-.lazy-load.appear {
-    opacity: 1;
-}
-
 
 @include tabletVertical(){
     .headline {

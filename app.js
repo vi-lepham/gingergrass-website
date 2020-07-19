@@ -189,7 +189,7 @@ const observerLazyLoad = new IntersectionObserver(function(entries, observer) {
         if (!entry.isIntersecting) {
             return;
         } 
-        entry.target.classList.add('appear');
+        loadElement(entry.target);
         observer.unobserve(entry.target);
     })
 }, {threshold: 0.2})

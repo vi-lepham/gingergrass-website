@@ -1032,16 +1032,6 @@ input[type="submit"] {
   opacity: 0;
 }
 
-.lazy-load {
-  opacity: 0;
-  -webkit-transition: ease-in 0.8s all;
-  transition: ease-in 0.8s all;
-}
-
-.lazy-load.appear {
-  opacity: 1;
-}
-
 @media (max-width: 1100px) {
   .headline {
     font-size: 3rem;
