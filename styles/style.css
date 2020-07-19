@@ -849,6 +849,9 @@
     font-size: 10px;
     height: 60vh;
   }
+  .s-access {
+    margin-top: 40%;
+  }
 }
 
 * {
