@@ -61,6 +61,7 @@ $secondaryColor:rgb(143, 119, 10);
     position: relative;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     
     .nav {
         display: flex;
