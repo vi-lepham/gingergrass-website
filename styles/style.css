@@ -40,10 +40,7 @@
   position: relative;
 }
 
-.s-opening .o-image .img {
-  background: url("../images/swirling-plate.jpg") no-repeat;
-  background-position: 50%;
-  background-size: cover;
+.s-opening .o-image img {
   height: 101%;
 }
 

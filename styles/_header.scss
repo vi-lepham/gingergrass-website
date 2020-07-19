@@ -48,10 +48,7 @@ $secondaryColor:rgb(143, 119, 10);
         background-color: $secondaryColor;
         @include center();
         position: relative;
-        .img {
-            background: url('../images/swirling-plate.jpg') no-repeat;
-            background-position: 50%;
-            background-size: cover;
+        img {
             height: 101%;
         }
     }
