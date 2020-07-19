@@ -157,9 +157,14 @@ input[type="submit"] {
 }
 
 .lazy-load {
-    display: none;
-    transform: translateY(-100px);
+    opacity: 0;
+    transition: ease-in 0.8s all;
 }
+
+.lazy-load.appear {
+    opacity: 1;
+}
+
 
 @include tabletVertical(){
     .headline {

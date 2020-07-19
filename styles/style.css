@@ -540,6 +540,7 @@
   padding: 1%;
   top: -5%;
   left: 50%;
+  z-index: 99;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   display: -ms-grid;
@@ -1032,9 +1033,13 @@ input[type="submit"] {
 }
 
 .lazy-load {
-  display: none;
-  -webkit-transform: translateY(-100px);
-          transform: translateY(-100px);
+  opacity: 0;
+  -webkit-transition: ease-in 0.8s all;
+  transition: ease-in 0.8s all;
+}
+
+.lazy-load.appear {
+  opacity: 1;
 }
 
 @media (max-width: 1100px) {

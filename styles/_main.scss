@@ -78,6 +78,7 @@ $primaryColor: rgb(182, 164, 83);
             padding: 1%;
             top: -5%;
             left: 50%;
+            z-index: 99;
             transform: translateX(-50%);
             display: grid;
             grid-template-columns: 1fr 4fr 5fr 1fr 4fr;
