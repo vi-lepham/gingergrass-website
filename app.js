@@ -28,7 +28,7 @@ TweenMax.from(".main", 2, {
 
 // UI Class
 class UI {
-    static toggleBurger() {
+    const toggleBurger() {
         const burger = document.querySelector('.burger-menu-content');
         const reserveBtn = document.querySelector('.reserve-btn');
         const logo = document.querySelector('.h-logo');
@@ -43,7 +43,7 @@ class UI {
             }
         }, 500); 
     }
-    static animateBurgerIcon = () => {
+    const animateBurgerIcon() {
         const lineTop = document.querySelector('.burger-btn .line1');
         const lineBottom = document.querySelector('.burger-btn .line2');
     
@@ -54,22 +54,24 @@ class UI {
 
 // Event Listener for burger menu window
 document.querySelector('.burger-btn').addEventListener('click', () => {
-    UI.toggleBurger();
-    UI.animateBurgerIcon();
+    const ui = new UI();
+    ui.toggleBurger();
+    ui.animateBurgerIcon();
 })
 
 // Event Listener for click in any burger menu options
 const burgerOptions = document.querySelectorAll('.burger-menu-content ul li');
 burgerOptions.forEach(option => {
     option.addEventListener('click', () => {
-        UI.toggleBurger();
-        UI.animateBurgerIcon();
+        const ui = new UI();
+        ui.toggleBurger();
+        ui.animateBurgerIcon();
     })
 })
 
 // Form Class
 class Form {
-    static displayError(input, msg) {
+    const displayError(input, msg) {
         let inputType = input.parentElement;
         if (input === date || input === time || input === email || input === phone) {
             inputType = input.parentElement.parentElement;
@@ -82,7 +84,9 @@ class Form {
             errorMsg.remove();
         }, 3000)
     }
-    static checkInputs() {
+    const checkInputs() {
+        const form = new Form();
+
         const name = document.getElementById('name');
         const date = document.getElementById('date');
         const time = document.getElementById('time');
@@ -90,26 +94,27 @@ class Form {
         const email = document.getElementById('email');
         const phone = document.getElementById('phone');
         const checkBox = document.getElementById('policy');
+
         if (name.value.trim() === '') {
-            Form.displayError(name, 'Name is required')
+            form.displayError(name, 'Name is required')
         }
         if (date.value === '') {
-            Form.displayError(date, 'Date is required')
+            form.displayError(date, 'Date is required')
         }
         if (time.value === '') {
-            Form.displayError(time, 'Specific time is required')
+            form.displayError(time, 'Specific time is required')
         }
         if (people.value.trim() === '') {
-            Form.displayError(people, 'Number of people is required')
+            form.displayError(people, 'Number of people is required')
         }
         if (email.value === '' || phone.value === '') {
-            Form.displayError(email, 'Contact is required')
+            form.displayError(email, 'Contact is required')
         }
         if (!checkBox.checked) {
-            Form.displayError(checkBox, 'Please agree to our Privacy Policy');
+            form.displayError(checkBox, 'Please agree to our Privacy Policy');
         }
     }
-    static clearInputs() {
+    const clearInputs() {
         const name = document.getElementById('name');
         const date = document.getElementById('date');
         const time = document.getElementById('time');
@@ -128,6 +133,7 @@ class Form {
 }
 
 // Event Listener for form submit
+
 const reserveForm = document.querySelector('form');
 const postFormData = () => {
     const formData = new FormData(reserveForm);
@@ -146,10 +152,12 @@ const postFormData = () => {
 
 reserveForm.addEventListener('submit', e => {
     e.preventDefault();
-    Form.checkInputs();
+
+    const form = new Form();
+
+    form.checkInputs();
     postFormData();
-    Form.clearInputs();
-    
+    form.clearInputs();
 })
 
 
@@ -159,7 +167,7 @@ const observerNav = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
         const reserveBtn = document.querySelector('.reserve-btn');
         const logo = document.querySelector('.h-logo');
-        console.log(entry)
+        
         if (!entry.isIntersecting) {
             
             reserveBtn.className = 'reserve-btn hide';
