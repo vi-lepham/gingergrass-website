@@ -28,7 +28,7 @@ TweenMax.from(".main", 2, {
 
 // UI Class
 class UI {
-    const toggleBurger() {
+    toggleBurger() {
         const burger = document.querySelector('.burger-menu-content');
         const reserveBtn = document.querySelector('.reserve-btn');
         const logo = document.querySelector('.h-logo');
@@ -43,7 +43,7 @@ class UI {
             }
         }, 500); 
     }
-    const animateBurgerIcon() {
+    animateBurgerIcon() {
         const lineTop = document.querySelector('.burger-btn .line1');
         const lineBottom = document.querySelector('.burger-btn .line2');
     
@@ -71,7 +71,7 @@ burgerOptions.forEach(option => {
 
 // Form Class
 class Form {
-    const displayError(input, msg) {
+    displayError(input, msg) {
         let inputType = input.parentElement;
         if (input === date || input === time || input === email || input === phone) {
             inputType = input.parentElement.parentElement;
@@ -84,7 +84,7 @@ class Form {
             errorMsg.remove();
         }, 3000)
     }
-    const checkInputs() {
+    checkInputs() {
         const form = new Form();
 
         const name = document.getElementById('name');
@@ -114,7 +114,7 @@ class Form {
             form.displayError(checkBox, 'Please agree to our Privacy Policy');
         }
     }
-    const clearInputs() {
+    clearInputs() {
         const name = document.getElementById('name');
         const date = document.getElementById('date');
         const time = document.getElementById('time');
